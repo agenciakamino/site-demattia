@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Wireframe · Layout 1 — Premium (A Autoridade Serena) | De Mattia Advogados</title>
+  <meta name="description" content="Wireframe lo-fi do conceito Minimalista Premium para De Mattia Advogados Associados." />
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<!--
+  ============================================================================
+  WIREFRAME LO-FI · LAYOUT 1 — "A AUTORIDADE SERENA" (Minimalista Premium)
+  Foco: estrutura, hierarquia e jornada de conversão. Sem cores de marca,
+  sem imagens reais, sem gradientes. Apenas tons de cinza, preto e branco.
+  ============================================================================
+-->
+<body class="bg-white text-slate-900 font-sans antialiased selection:bg-slate-200">
+
+  <!-- Faixa indicadora de wireframe (remover na versão final) -->
+  <div class="w-full bg-slate-900 text-white text-xs tracking-widest uppercase py-2 px-4 flex items-center justify-center gap-4 relative">
+    <a href="index.html" class="absolute left-4 inline-flex items-center gap-1.5 text-slate-300 hover:text-white transition-colors normal-case tracking-wider">&larr; <span class="hidden sm:inline">Conceitos</span></a>
+    <span class="text-center">Wireframe Lo-Fi · Conceito 1 de 3 · A Autoridade Serena · (cores e fotos são placeholders)</span>
+  </div>
+
+  <!-- ============================ HEADER ============================ -->
+  <header class="border-b border-slate-300">
+    <div class="max-w-5xl mx-auto px-6 h-20 flex items-center justify-between">
+      <!-- Logo tipográfico -->
+      <div class="text-lg tracking-[0.2em] uppercase font-medium text-slate-900">
+        De&nbsp;Mattia
+        <span class="block text-[10px] tracking-[0.3em] text-slate-500 font-normal">Advogados Associados</span>
+      </div>
+      <!-- Navegação minimalista -->
+      <nav class="hidden md:flex items-center gap-8 text-sm text-slate-600">
+        <a href="#atuacao" class="hover:text-slate-900">Atuação</a>
+        <a href="#escritorio" class="hover:text-slate-900">Escritório</a>
+        <a href="#equipe" class="hover:text-slate-900">Equipe</a>
+        <a href="#contato" class="hover:text-slate-900">Contato</a>
+        <a href="#contato" class="border-b border-slate-900 pb-0.5 text-slate-900">Agendar conversa</a>
+      </nav>
+      <button class="md:hidden text-sm border border-slate-400 rounded px-3 py-1.5 text-slate-700">Menu</button>
+    </div>
+  </header>
+
+  <!-- ============================ HERO ============================ -->
+  <!-- Texto-protagonista, sem foto cheia. Fala do desejo do cliente. -->
+  <section class="max-w-4xl mx-auto px-6 py-28 md:py-40 text-center">
+    <p class="text-xs tracking-[0.35em] uppercase text-slate-500 mb-10">Advocacia empresarial consultiva e preventiva · Joinville/SC</p>
+    <h1 class="text-4xl md:text-6xl lg:text-7xl leading-[1.05] font-light text-slate-900">
+      Segurança jurídica<br class="hidden md:block" /> para quem constrói<br class="hidden md:block" /> a longo prazo.
+    </h1>
+    <p class="mt-10 text-lg text-slate-600 max-w-xl mx-auto font-light">
+      Assessoria jurídica artesanal, em linguagem clara, para empresas, cooperativas e famílias que valorizam previsibilidade.
+    </p>
+    <div class="mt-12">
+      <a href="#contato" class="inline-block border border-slate-900 px-10 py-4 text-sm tracking-widest uppercase text-slate-900 hover:bg-slate-900 hover:text-white transition-colors">
+        Agendar uma conversa
+      </a>
+    </div>
+    <p class="mt-8 text-xs tracking-wider text-slate-400 uppercase">OAB/SC · Ajorpeme · atuação nacional em recuperação judicial</p>
+  </section>
+
+  <!-- ============================ FAIXA DE AUTORIDADE (sutil) ============================ -->
+  <section class="border-y border-slate-200 bg-slate-50">
+    <div class="max-w-5xl mx-auto px-6 py-10">
+      <p class="text-center text-[10px] tracking-[0.35em] uppercase text-slate-400 mb-6">Reconhecimento &amp; credenciais</p>
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+        <!-- Placeholders de selos em escala de cinza -->
+        <div class="h-16 border border-dashed border-slate-400 bg-gray-200 flex items-center justify-center text-[11px] text-slate-500 text-center px-2">[ Selo: OAB Joinville ]</div>
+        <div class="h-16 border border-dashed border-slate-400 bg-gray-200 flex items-center justify-center text-[11px] text-slate-500 text-center px-2">[ Selo: Ajorpeme ]</div>
+        <div class="h-16 border border-dashed border-slate-400 bg-gray-200 flex items-center justify-center text-[11px] text-slate-500 text-center px-2">[ Selo: Professor · Ielusc ]</div>
+        <div class="h-16 border border-dashed border-slate-400 bg-gray-200 flex items-center justify-center text-[11px] text-slate-500 text-center px-2">[ Selo: Mestrado · UNIVILLE ]</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================ ÁREAS DE ATUAÇÃO (índice de livro) ============================ -->
+  <section id="atuacao" class="max-w-4xl mx-auto px-6 py-28">
+    <div class="text-center mb-16">
+      <p class="text-xs tracking-[0.35em] uppercase text-slate-500 mb-4">Áreas de atuação</p>
+      <h2 class="text-3xl md:text-4xl font-light text-slate-900">Como cuidamos do seu patrimônio e do seu negócio</h2>
+    </div>
+
+    <ul class="divide-y divide-slate-200 border-y border-slate-200">
+      <!-- Cada item: número + título + descrição (hover) + seta -->
+      <li class="group">
+        <a href="#" class="flex items-baseline gap-6 py-7 hover:px-4 transition-all">
+          <span class="text-sm text-slate-400 tabular-nums">01</span>
+          <span class="flex-1">
+            <span class="block text-xl md:text-2xl font-light text-slate-900">Advocacia Consultiva e Preventiva</span>
+            <span class="block text-sm text-slate-500 mt-1">Acompanhamento jurídico contínuo do desenvolvimento do seu negócio — antes que o problema vire processo.</span>
+          </span>
+          <span class="text-slate-400 group-hover:translate-x-1 transition-transform">→</span>
+        </a>
+      </li>
+      <li class="group">
+        <a href="#" class="flex items-baseline gap-6 py-7 hover:px-4 transition-all">
+          <span class="text-sm text-slate-400 tabular-nums">02</span>
+          <span class="flex-1">
+            <span class="block text-xl md:text-2xl font-light text-slate-900">Direito do Trabalho Empresarial</span>
+            <span class="block text-sm text-slate-500 mt-1">Defesa do empregador na Justiça do Trabalho, MPT e Ministério do Trabalho.</span>
+          </span>
+          <span class="text-slate-400 group-hover:translate-x-1 transition-transform">→</span>
+        </a>
+      </li>
+      <li class="group">
+        <a href="#" class="flex items-baseline gap-6 py-7 hover:px-4 transition-all">
+          <span class="text-sm text-slate-400 tabular-nums">03</span>
+          <span class="flex-1">
+            <span class="block text-xl md:text-2xl font-light text-slate-900">Direito Civil, Contratos e Sucessões</span>
+            <span class="block text-sm text-slate-500 mt-1">Contratos, responsabilidade civil, família e planejamento sucessório.</span>
+          </span>
+          <span class="text-slate-400 group-hover:translate-x-1 transition-transform">→</span>
+        </a>
+      </li>
+      <li class="group">
+        <a href="#" class="flex items-baseline gap-6 py-7 hover:px-4 transition-all">
+          <span class="text-sm text-slate-400 tabular-nums">04</span>
+          <span class="flex-1">
+            <span class="block text-xl md:text-2xl font-light text-slate-900">Direito Tributário</span>
+            <span class="block text-sm text-slate-500 mt-1">Planejamento tributário, recuperação de créditos e defesa em execuções fiscais.</span>
+          </span>
+          <span class="text-slate-400 group-hover:translate-x-1 transition-transform">→</span>
+        </a>
+      </li>
+      <li class="group">
+        <a href="#" class="flex items-baseline gap-6 py-7 hover:px-4 transition-all">
+          <span class="text-sm text-slate-400 tabular-nums">05</span>
+          <span class="flex-1">
+            <span class="block text-xl md:text-2xl font-light text-slate-900">Recuperação Judicial e Falência</span>
+            <span class="block text-sm text-slate-500 mt-1">Salvaguarda do negócio em crise. Atuação nacional, inclusive como advogado de credores.</span>
+          </span>
+          <span class="text-slate-400 group-hover:translate-x-1 transition-transform">→</span>
+        </a>
+      </li>
+      <li class="group">
+        <a href="#" class="flex items-baseline gap-6 py-7 hover:px-4 transition-all">
+          <span class="text-sm text-slate-400 tabular-nums">06</span>
+          <span class="flex-1">
+            <span class="block text-xl md:text-2xl font-light text-slate-900">Direito Cooperativo</span>
+            <span class="block text-sm text-slate-500 mt-1">Estatutos, pareceres, atas, assembleias e representação judicial de cooperativas.</span>
+          </span>
+          <span class="text-slate-400 group-hover:translate-x-1 transition-transform">→</span>
+        </a>
+      </li>
+    </ul>
+  </section>
+
+  <!-- ============================ MANIFESTO (centralizado) ============================ -->
+  <section id="escritorio" class="bg-slate-50 border-y border-slate-200">
+    <div class="max-w-3xl mx-auto px-6 py-28 text-center">
+      <p class="text-xs tracking-[0.35em] uppercase text-slate-500 mb-10">O nosso compromisso</p>
+      <p class="text-2xl md:text-3xl leading-relaxed font-light text-slate-800">
+        “Transformamos problemas em soluções por meio de serviços jurídicos personalizados.
+        Atuamos de forma artesanal, com pessoalidade, linguagem clara e prestação de contas —
+        porque acreditamos que segurança jurídica nasce de uma relação de confiança.”
+      </p>
+      <div class="mt-10 inline-block w-16 border-t border-slate-400"></div>
+      <p class="mt-6 text-sm text-slate-500 tracking-wider uppercase">Missão · Visão · Valores do escritório</p>
+    </div>
+  </section>
+
+  <!-- ============================ EQUIPE (retratos de autoridade) ============================ -->
+  <section id="equipe" class="max-w-5xl mx-auto px-6 py-28">
+    <div class="text-center mb-16">
+      <p class="text-xs tracking-[0.35em] uppercase text-slate-500 mb-4">Quem conduz o seu caso</p>
+      <h2 class="text-3xl md:text-4xl font-light text-slate-900">Autoridade técnica, atendimento pessoal</h2>
+    </div>
+
+    <div class="grid md:grid-cols-3 gap-12">
+      <!-- Sócio 1 -->
+      <article class="text-center">
+        <div class="aspect-[3/4] border border-dashed border-slate-400 bg-gray-200 flex items-center justify-center text-xs text-slate-500 text-center px-4 mb-6">
+          [ Foto do Sócio — Retrato Preto e Branco ]
+        </div>
+        <h3 class="text-xl font-light text-slate-900">João de Mattia Neto</h3>
+        <p class="text-xs text-slate-400 tracking-wider uppercase mt-1">OAB/SC 22505</p>
+        <p class="text-sm text-slate-600 mt-3">Mestre · Professor de Direito (Ielusc) · Ex-Conselheiro da OAB Joinville</p>
+        <a href="#" class="inline-block mt-4 text-xs tracking-widest uppercase border-b border-slate-400 text-slate-600 hover:text-slate-900">Ver currículo</a>
+      </article>
+      <!-- Sócio 2 -->
+      <article class="text-center">
+        <div class="aspect-[3/4] border border-dashed border-slate-400 bg-gray-200 flex items-center justify-center text-xs text-slate-500 text-center px-4 mb-6">
+          [ Foto da Sócia — Retrato Preto e Branco ]
+        </div>
+        <h3 class="text-xl font-light text-slate-900">Cristine Weiss de Mattia</h3>
+        <p class="text-xs text-slate-400 tracking-wider uppercase mt-1">OAB/SC 22584</p>
+        <p class="text-sm text-slate-600 mt-3">Pós em Processo Civil (PUC/PR) · Direito médico, contratos e sucessório</p>
+        <a href="#" class="inline-block mt-4 text-xs tracking-widest uppercase border-b border-slate-400 text-slate-600 hover:text-slate-900">Ver currículo</a>
+      </article>
+      <!-- Sócio 3 -->
+      <article class="text-center">
+        <div class="aspect-[3/4] border border-dashed border-slate-400 bg-gray-200 flex items-center justify-center text-xs text-slate-500 text-center px-4 mb-6">
+          [ Foto do Advogado — Retrato Preto e Branco ]
+        </div>
+        <h3 class="text-xl font-light text-slate-900">Luiz Felipe Gonçalves</h3>
+        <p class="text-xs text-slate-400 tracking-wider uppercase mt-1">OAB/SC 34730</p>
+        <p class="text-sm text-slate-600 mt-3">Recuperação judicial nacional · Advogado de credores</p>
+        <a href="#" class="inline-block mt-4 text-xs tracking-widest uppercase border-b border-slate-400 text-slate-600 hover:text-slate-900">Ver currículo</a>
+      </article>
+    </div>
+  </section>
+
+  <!-- ============================ PROVA SOCIAL DISCRETA ============================ -->
+  <section class="border-t border-slate-200">
+    <div class="max-w-4xl mx-auto px-6 py-24 grid md:grid-cols-3 gap-12">
+      <blockquote class="text-center md:text-left">
+        <p class="text-lg font-light text-slate-800 leading-relaxed">“Passamos a tratar o jurídico como parte da estratégia, não como apagar incêndio.”</p>
+        <footer class="mt-4 text-xs tracking-wider uppercase text-slate-400">— Indústria metalmecânica</footer>
+      </blockquote>
+      <blockquote class="text-center md:text-left">
+        <p class="text-lg font-light text-slate-800 leading-relaxed">“A sucessão da família foi organizada com clareza e sem desgaste entre nós.”</p>
+        <footer class="mt-4 text-xs tracking-wider uppercase text-slate-400">— Família empresária</footer>
+      </blockquote>
+      <blockquote class="text-center md:text-left">
+        <p class="text-lg font-light text-slate-800 leading-relaxed">“Finalmente uma assessoria que explica o que está acontecendo em linguagem que entendemos.”</p>
+        <footer class="mt-4 text-xs tracking-wider uppercase text-slate-400">— Cooperativa agroindustrial</footer>
+      </blockquote>
+    </div>
+  </section>
+
+  <!-- ============================ CTA DISCRETO / RESERVADO ============================ -->
+  <section id="contato" class="bg-slate-900 text-white">
+    <div class="max-w-3xl mx-auto px-6 py-28 text-center">
+      <h2 class="text-3xl md:text-5xl font-light leading-tight">Agende uma conversa reservada</h2>
+      <p class="mt-6 text-slate-300 font-light max-w-lg mx-auto">
+        Um primeiro encontro para entendermos o seu cenário e mostrarmos como podemos ajudar — sem compromisso.
+      </p>
+      <div class="mt-12 flex flex-col sm:flex-row gap-4 justify-center">
+        <a href="#" class="border border-white px-10 py-4 text-sm tracking-widest uppercase hover:bg-white hover:text-slate-900 transition-colors">Agendar reunião</a>
+        <a href="#" class="border border-slate-600 px-10 py-4 text-sm tracking-widest uppercase text-slate-300 hover:border-white hover:text-white transition-colors">WhatsApp</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================ RODAPÉ (carta timbrada) ============================ -->
+  <footer class="border-t border-slate-300">
+    <div class="max-w-5xl mx-auto px-6 py-16">
+      <div class="grid md:grid-cols-3 gap-10 text-sm text-slate-600">
+        <div>
+          <div class="text-base tracking-[0.2em] uppercase text-slate-900 mb-3">De Mattia Advogados</div>
+          <p class="text-xs tracking-wider text-slate-400 uppercase">OAB/SC 4011/2017</p>
+          <p class="mt-4">Advocacia consultiva e preventiva<br />Joinville · Santa Catarina</p>
+        </div>
+        <div>
+          <p class="text-xs tracking-widest uppercase text-slate-400 mb-3">Contato</p>
+          <p>(47) 99233-1111</p>
+          <p>contato@demattia.com.br</p>
+          <p class="mt-2"><a href="#" class="border-b border-slate-300 hover:border-slate-900">LinkedIn</a></p>
+        </div>
+        <div>
+          <p class="text-xs tracking-widest uppercase text-slate-400 mb-3">Endereço &amp; horário</p>
+          <div class="h-24 border border-dashed border-slate-400 bg-gray-200 flex items-center justify-center text-[11px] text-slate-500 text-center px-2">[ Mini-mapa / Endereço do escritório ]</div>
+        </div>
+      </div>
+      <div class="mt-12 pt-6 border-t border-slate-200 flex flex-col md:flex-row justify-between gap-2 text-xs text-slate-400">
+        <span>© De Mattia Advogados Associados. Todos os direitos reservados.</span>
+        <span>Conteúdo meramente informativo, em conformidade com o Código de Ética da OAB.</span>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

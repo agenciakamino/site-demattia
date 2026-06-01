@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Wireframe · Layout 3 — Monografia Editorial | De Mattia Advogados</title>
+  <meta name="description" content="Wireframe lo-fi do conceito Monografia Editorial para De Mattia Advogados Associados." />
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<!--
+  ============================================================================
+  WIREFRAME LO-FI · LAYOUT 3 — "MONOGRAFIA EDITORIAL"
+  Sofisticação de revista premium: masthead, hero split texto/imagem alta,
+  manifesto com drop cap, capítulos com numerais gigantes, pull quotes
+  com aspas grandes, captions com fios. Apenas cinza, preto e branco.
+  ============================================================================
+-->
+<body class="bg-stone-50 text-slate-900 font-sans antialiased">
+
+  <div class="w-full bg-slate-900 text-white text-xs tracking-widest uppercase py-2 px-4 flex items-center justify-center gap-4 relative">
+    <a href="index.html" class="absolute left-4 inline-flex items-center gap-1.5 text-slate-300 hover:text-white transition-colors normal-case tracking-wider">&larr; <span class="hidden sm:inline">Conceitos</span></a>
+    <span class="text-center">Wireframe Lo-Fi · Conceito 3 de 3 · Monografia Editorial · (cores e fotos são placeholders)</span>
+  </div>
+
+  <!-- ============================ MASTHEAD (cabeçalho de revista) ============================ -->
+  <header class="border-b border-slate-900/15">
+    <div class="max-w-7xl mx-auto px-6 lg:px-10">
+      <div class="flex items-center justify-between py-4 text-[11px] tracking-[0.3em] uppercase text-slate-500">
+        <span>Joinville · Santa Catarina</span>
+        <span>Edição · O Escritório</span>
+      </div>
+      <div class="border-t border-slate-900/15 py-7 flex flex-col items-center">
+        <div class="text-3xl md:text-4xl tracking-[0.25em] uppercase font-light text-slate-900">De&nbsp;Mattia</div>
+        <div class="text-[11px] tracking-[0.4em] uppercase text-slate-400 mt-2">Advogados Associados · desde [ano]</div>
+      </div>
+      <nav class="border-t border-slate-900/15 py-4 flex items-center justify-center gap-8 text-sm text-slate-600">
+        <a href="#casa" class="hover:text-slate-900">A Casa</a>
+        <a href="#historias" class="hover:text-slate-900">Histórias</a>
+        <a href="#capitulos" class="hover:text-slate-900">Atuação</a>
+        <a href="#time" class="hover:text-slate-900">O Time</a>
+        <a href="#contato" class="hover:text-slate-900">Contato</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ============================ HERO SPLIT (texto | imagem vertical alta) ============================ -->
+  <section class="max-w-7xl mx-auto px-6 lg:px-10 pt-16 lg:pt-24 pb-20">
+    <div class="grid lg:grid-cols-12 gap-10 lg:gap-16 items-center">
+      <!-- Texto -->
+      <div class="lg:col-span-7 order-2 lg:order-1">
+        <p class="text-xs tracking-[0.35em] uppercase text-slate-400 mb-8">Ensaio de abertura</p>
+        <h1 class="text-4xl md:text-6xl lg:text-[5rem] font-light leading-[1.02] tracking-tight text-slate-900">
+          Por trás de cada empresa, <em class="italic font-normal">há pessoas.</em>
+        </h1>
+        <p class="mt-8 text-xl text-slate-600 leading-relaxed max-w-xl">
+          Há quase duas décadas, traduzimos o direito em decisões tranquilas — com proximidade, linguagem clara e cuidado artesanal. É de pessoas que cuidamos.
+        </p>
+        <div class="mt-10 flex items-center gap-6">
+          <a href="#contato" class="bg-slate-900 text-white font-medium px-8 py-4 rounded-full hover:bg-slate-700 transition">Marcar uma conversa</a>
+          <a href="#casa" class="text-sm tracking-wider uppercase text-slate-600 border-b border-slate-400 pb-0.5 hover:text-slate-900">Conheça a casa ↓</a>
+        </div>
+      </div>
+      <!-- Imagem vertical alta -->
+      <div class="lg:col-span-5 order-1 lg:order-2">
+        <figure>
+          <div class="aspect-[3/4] border border-dashed border-slate-400 bg-gray-200 flex items-center justify-center text-sm text-slate-500 text-center px-6">
+            [ Foto real, vertical e calorosa — sócio ou escritório · evitar banco de imagem ]
+          </div>
+          <figcaption class="mt-3 flex items-center gap-3 text-[11px] tracking-wider uppercase text-slate-400">
+            <span class="w-8 h-px bg-slate-300"></span> Fig. 01 — A casa De Mattia
+          </figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================ MANIFESTO (drop cap, coluna estreita) ============================ -->
+  <section id="casa" class="border-y border-slate-900/15 bg-white">
+    <div class="max-w-3xl mx-auto px-6 py-24 lg:py-32">
+      <p class="text-center text-xs tracking-[0.35em] uppercase text-slate-400 mb-14">A nossa filosofia</p>
+      <p class="text-2xl md:text-3xl leading-[1.5] text-slate-800 [&>span:first-child]:float-left [&>span:first-child]:text-8xl [&>span:first-child]:leading-[0.75] [&>span:first-child]:pr-4 [&>span:first-child]:pt-2 [&>span:first-child]:font-light">
+        <span>A</span>creditamos que advocacia boa começa por ouvir. Antes de qualquer petição, há uma conversa — e é nela que entendemos o que realmente está em jogo para você e para o seu negócio.
+      </p>
+      <p class="mt-8 text-lg md:text-xl leading-relaxed text-slate-600">
+        Por isso atuamos de forma artesanal: cada cliente é acompanhado de perto, com pessoalidade, prestação de contas e uma linguagem que dispensa o "juridiquês". Não somos uma máquina de processos — somos um escritório que constrói relações de confiança que duram anos.
+      </p>
+    </div>
+  </section>
+
+  <!-- ============================ HISTÓRIAS (pull quotes editoriais) ============================ -->
+  <section id="historias" class="max-w-7xl mx-auto px-6 lg:px-10 py-28">
+    <div class="grid lg:grid-cols-12 gap-10 mb-16">
+      <div class="lg:col-span-5">
+        <p class="text-xs tracking-[0.35em] uppercase text-slate-400 mb-4">Reportagem</p>
+        <h2 class="text-4xl md:text-5xl font-light tracking-tight text-slate-900">Histórias de quem confiou</h2>
+      </div>
+      <div class="lg:col-span-7 lg:pt-12">
+        <p class="text-lg text-slate-600 leading-relaxed max-w-xl">Relatos anonimizados, em conformidade com o Código de Ética da OAB — sem promessa de resultado, apenas a história de uma relação de confiança.</p>
+      </div>
+    </div>
+
+    <div class="space-y-px bg-slate-900/10 border-y border-slate-900/10">
+      <!-- Caso 1 -->
+      <article class="bg-stone-50 grid md:grid-cols-12 gap-8 py-12 md:py-16">
+        <div class="md:col-span-3">
+          <span class="text-7xl font-light text-slate-300 tabular-nums leading-none">01</span>
+          <p class="mt-4 text-[11px] tracking-wider uppercase text-slate-400">Indústria metalmecânica</p>
+        </div>
+        <div class="md:col-span-9">
+          <h3 class="text-2xl md:text-3xl font-light text-slate-900 leading-snug">A indústria que blindou o seu quadro trabalhista</h3>
+          <p class="mt-4 text-lg text-slate-600 leading-relaxed max-w-2xl">[ Narrativa: como a assessoria preventiva contínua transformou o jurídico de "apagar incêndio" em parte da estratégia da empresa. ]</p>
+        </div>
+      </article>
+      <!-- Caso 2 -->
+      <article class="bg-stone-50 grid md:grid-cols-12 gap-8 py-12 md:py-16">
+        <div class="md:col-span-3">
+          <span class="text-7xl font-light text-slate-300 tabular-nums leading-none">02</span>
+          <p class="mt-4 text-[11px] tracking-wider uppercase text-slate-400">Família empresária</p>
+        </div>
+        <div class="md:col-span-9">
+          <h3 class="text-2xl md:text-3xl font-light text-slate-900 leading-snug">A família que organizou a sucessão sem brigas</h3>
+          <p class="mt-4 text-lg text-slate-600 leading-relaxed max-w-2xl">[ Narrativa: planejamento sucessório que preservou o patrimônio e, sobretudo, a relação entre as pessoas. ]</p>
+        </div>
+      </article>
+      <!-- Caso 3 -->
+      <article class="bg-stone-50 grid md:grid-cols-12 gap-8 py-12 md:py-16">
+        <div class="md:col-span-3">
+          <span class="text-7xl font-light text-slate-300 tabular-nums leading-none">03</span>
+          <p class="mt-4 text-[11px] tracking-wider uppercase text-slate-400">Cooperativa agroindustrial</p>
+        </div>
+        <div class="md:col-span-9">
+          <h3 class="text-2xl md:text-3xl font-light text-slate-900 leading-snug">A cooperativa que ganhou um jurídico de verdade</h3>
+          <p class="mt-4 text-lg text-slate-600 leading-relaxed max-w-2xl">[ Narrativa: suporte contínuo em estatutos, assembleias e representação, dando segurança à governança da cooperativa. ]</p>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- ============================ PULL QUOTE de impacto (largura total) ============================ -->
+  <section class="bg-slate-900 text-white">
+    <div class="max-w-5xl mx-auto px-6 py-28 lg:py-36 text-center">
+      <span class="block text-9xl leading-[0.5] font-serif text-slate-700 select-none mb-6">”</span>
+      <blockquote class="text-3xl md:text-5xl font-light leading-[1.2] tracking-tight">
+        Finalmente uma assessoria que explica o que está acontecendo numa linguagem que a gente entende.
+      </blockquote>
+      <footer class="mt-10 text-sm tracking-wider uppercase text-slate-400">— Cliente de planejamento sucessório</footer>
+    </div>
+  </section>
+
+  <!-- ============================ ÁREAS COMO CAPÍTULOS (alternado, numerais gigantes) ============================ -->
+  <section id="capitulos" class="max-w-7xl mx-auto px-6 lg:px-10 py-28">
+    <div class="text-center mb-20">
+      <p class="text-xs tracking-[0.35em] uppercase text-slate-400 mb-4">Sumário</p>
+      <h2 class="text-4xl md:text-5xl font-light tracking-tight text-slate-900">Os capítulos do nosso trabalho</h2>
+    </div>
+
+    <div class="space-y-24">
+      <!-- Capítulo I -->
+      <div class="grid lg:grid-cols-12 gap-10 items-center">
+        <div class="lg:col-span-6">
+          <div class="aspect-[4/3] border border-dashed border-slate-400 bg-gray-200 flex items-center justify-center text-xs text-slate-500 text-center px-4">[ Imagem do capítulo ]</div>
+        </div>
+        <div class="lg:col-span-6 lg:pl-6">
+          <div class="flex items-baseline gap-4">
+            <span class="text-5xl font-light text-slate-300 tabular-nums">I</span>
+            <span class="w-12 h-px bg-slate-300"></span>
+          </div>
+          <h3 class="mt-5 text-3xl font-light text-slate-900">Advocacia Consultiva e Preventiva</h3>
+          <p class="mt-4 text-lg text-slate-600 leading-relaxed">Estamos ao lado do seu negócio no dia a dia, acompanhando o crescimento e antecipando riscos. É o coração do que fazemos.</p>
+          <a href="#" class="mt-5 inline-block text-sm tracking-wider uppercase border-b border-slate-400 pb-0.5 text-slate-700 hover:text-slate-900">Ler o capítulo →</a>
+        </div>
+      </div>
+      <!-- Capítulo II (invertido) -->
+      <div class="grid lg:grid-cols-12 gap-10 items-center">
+        <div class="lg:col-span-6 lg:order-2">
+          <div class="aspect-[4/3] border border-dashed border-slate-400 bg-gray-200 flex items-center justify-center text-xs text-slate-500 text-center px-4">[ Imagem do capítulo ]</div>
+        </div>
+        <div class="lg:col-span-6 lg:order-1 lg:pr-6 lg:text-right">
+          <div class="flex items-baseline gap-4 lg:justify-end">
+            <span class="w-12 h-px bg-slate-300 hidden lg:block"></span>
+            <span class="text-5xl font-light text-slate-300 tabular-nums">II</span>
+            <span class="w-12 h-px bg-slate-300 lg:hidden"></span>
+          </div>
+          <h3 class="mt-5 text-3xl font-light text-slate-900">Trabalho &amp; Tributário</h3>
+          <p class="mt-4 text-lg text-slate-600 leading-relaxed">Defendemos o empregador e cuidamos da saúde tributária da empresa, com planejamento e recuperação de créditos indevidos.</p>
+          <a href="#" class="mt-5 inline-block text-sm tracking-wider uppercase border-b border-slate-400 pb-0.5 text-slate-700 hover:text-slate-900">Ler o capítulo →</a>
+        </div>
+      </div>
+      <!-- Capítulo III -->
+      <div class="grid lg:grid-cols-12 gap-10 items-center">
+        <div class="lg:col-span-6">
+          <div class="aspect-[4/3] border border-dashed border-slate-400 bg-gray-200 flex items-center justify-center text-xs text-slate-500 text-center px-4">[ Imagem do capítulo ]</div>
+        </div>
+        <div class="lg:col-span-6 lg:pl-6">
+          <div class="flex items-baseline gap-4">
+            <span class="text-5xl font-light text-slate-300 tabular-nums">III</span>
+            <span class="w-12 h-px bg-slate-300"></span>
+          </div>
+          <h3 class="mt-5 text-3xl font-light text-slate-900">Sucessões, Recuperação Judicial &amp; Cooperativo</h3>
+          <p class="mt-4 text-lg text-slate-600 leading-relaxed">Do planejamento patrimonial das famílias à reestruturação de empresas em crise (atuação nacional) e ao suporte completo a cooperativas.</p>
+          <a href="#" class="mt-5 inline-block text-sm tracking-wider uppercase border-b border-slate-400 pb-0.5 text-slate-700 hover:text-slate-900">Ler o capítulo →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================ O TIME (biográfico editorial) ============================ -->
+  <section id="time" class="border-y border-slate-900/15 bg-white">
+    <div class="max-w-7xl mx-auto px-6 lg:px-10 py-28">
+      <div class="mb-20 max-w-2xl">
+        <p class="text-xs tracking-[0.35em] uppercase text-slate-400 mb-4">Os autores</p>
+        <h2 class="text-4xl md:text-5xl font-light tracking-tight text-slate-900">As pessoas que vão cuidar do seu caso</h2>
+      </div>
+      <div class="space-y-16">
+        <!-- Bio 1 -->
+        <article class="grid lg:grid-cols-12 gap-10 items-start border-t border-slate-900/10 pt-12">
+          <div class="lg:col-span-4">
+            <div class="aspect-[3/4] max-w-xs border border-dashed border-slate-400 bg-gray-200 flex items-center justify-center text-xs text-slate-500 text-center px-4">[ Retrato caloroso — João ]</div>
+          </div>
+          <div class="lg:col-span-8">
+            <h3 class="text-3xl font-light text-slate-900">João de Mattia Neto</h3>
+            <p class="text-xs tracking-wider uppercase text-slate-400 mt-2">OAB/SC 22505</p>
+            <p class="mt-6 text-xl text-slate-700 leading-relaxed italic">“[ Bio em primeira pessoa: por que escolhi o direito e o que me move no atendimento às empresas e cooperativas. ]”</p>
+            <p class="mt-5 text-slate-600">Mestre em Patrimônio Cultural e Sociedade · Professor de Direito (Ielusc) · Ex-Conselheiro da OAB Joinville · Diretoria da Ajorpeme.</p>
+          </div>
+        </article>
+        <!-- Bio 2 -->
+        <article class="grid lg:grid-cols-12 gap-10 items-start border-t border-slate-900/10 pt-12">
+          <div class="lg:col-span-4">
+            <div class="aspect-[3/4] max-w-xs border border-dashed border-slate-400 bg-gray-200 flex items-center justify-center text-xs text-slate-500 text-center px-4">[ Retrato caloroso — Cristine ]</div>
+          </div>
+          <div class="lg:col-span-8">
+            <h3 class="text-3xl font-light text-slate-900">Cristine Weiss de Mattia</h3>
+            <p class="text-xs tracking-wider uppercase text-slate-400 mt-2">OAB/SC 22584</p>
+            <p class="mt-6 text-xl text-slate-700 leading-relaxed italic">“[ Bio em primeira pessoa: a relação com o cliente e o cuidado com contratos, direito médico e sucessões. ]”</p>
+            <p class="mt-5 text-slate-600">Pós-graduação em Direito Processual Civil (PUC/PR) · Direito do transporte, médico, do consumidor e sucessório.</p>
+          </div>
+        </article>
+        <!-- Bio 3 -->
+        <article class="grid lg:grid-cols-12 gap-10 items-start border-t border-slate-900/10 pt-12">
+          <div class="lg:col-span-4">
+            <div class="aspect-[3/4] max-w-xs border border-dashed border-slate-400 bg-gray-200 flex items-center justify-center text-xs text-slate-500 text-center px-4">[ Retrato caloroso — Luiz Felipe ]</div>
+          </div>
+          <div class="lg:col-span-8">
+            <h3 class="text-3xl font-light text-slate-900">Luiz Felipe Gonçalves</h3>
+            <p class="text-xs tracking-wider uppercase text-slate-400 mt-2">OAB/SC 34730</p>
+            <p class="mt-6 text-xl text-slate-700 leading-relaxed italic">“[ Bio em primeira pessoa: a atuação em recuperação judicial pelo país e a defesa de credores. ]”</p>
+            <p class="mt-5 text-slate-600">Graduação pela PUC/PR · Recuperação judicial e direito falimentar · Atuação nacional.</p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================ PRINCÍPIOS ============================ -->
+  <section class="max-w-7xl mx-auto px-6 lg:px-10 py-28">
+    <p class="text-xs tracking-[0.35em] uppercase text-slate-400 mb-14 text-center">Como pensamos o direito</p>
+    <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-px bg-slate-900/10 border border-slate-900/10">
+      <div class="bg-stone-50 p-8">
+        <span class="text-3xl font-light text-slate-300 tabular-nums">01</span>
+        <h3 class="mt-4 text-xl font-medium text-slate-900">Transparência</h3>
+        <p class="mt-2 text-slate-600 leading-relaxed">Você sempre sabe em que pé está o seu caso.</p>
+      </div>
+      <div class="bg-stone-50 p-8">
+        <span class="text-3xl font-light text-slate-300 tabular-nums">02</span>
+        <h3 class="mt-4 text-xl font-medium text-slate-900">Ética</h3>
+        <p class="mt-2 text-slate-600 leading-relaxed">O que é certo vem antes do que é conveniente.</p>
+      </div>
+      <div class="bg-stone-50 p-8">
+        <span class="text-3xl font-light text-slate-300 tabular-nums">03</span>
+        <h3 class="mt-4 text-xl font-medium text-slate-900">Linguagem clara</h3>
+        <p class="mt-2 text-slate-600 leading-relaxed">Explicamos o direito de um jeito que você decide com segurança.</p>
+      </div>
+      <div class="bg-stone-50 p-8">
+        <span class="text-3xl font-light text-slate-300 tabular-nums">04</span>
+        <h3 class="mt-4 text-xl font-medium text-slate-900">Comprometimento</h3>
+        <p class="mt-2 text-slate-600 leading-relaxed">O seu caso é tratado como se fosse nosso.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================ CTA RELACIONAL ============================ -->
+  <section id="contato" class="border-t border-slate-900/15 bg-white">
+    <div class="max-w-3xl mx-auto px-6 py-32 text-center">
+      <h2 class="text-4xl md:text-6xl font-light tracking-tight leading-[1.05] text-slate-900">Vamos conversar sobre o seu caso?</h2>
+      <p class="mt-8 text-xl text-slate-600 max-w-xl mx-auto leading-relaxed">A primeira conversa é para a gente se entender — sem compromisso e sem juridiquês.</p>
+      <div class="mt-12 flex flex-col sm:flex-row gap-4 justify-center">
+        <a href="#" class="bg-slate-900 text-white font-medium px-10 py-4 rounded-full hover:bg-slate-700 active:scale-95 transition">Marcar uma conversa</a>
+        <a href="#" class="px-10 py-4 rounded-full font-medium text-slate-700 underline underline-offset-4 decoration-slate-300 hover:text-slate-900 transition">WhatsApp</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================ RODAPÉ EDITORIAL ============================ -->
+  <footer class="bg-slate-900 text-white">
+    <div class="max-w-7xl mx-auto px-6 lg:px-10 py-16">
+      <div class="grid md:grid-cols-3 gap-12">
+        <div>
+          <div class="text-2xl tracking-[0.2em] uppercase font-light">De&nbsp;Mattia</div>
+          <p class="text-[11px] tracking-[0.3em] uppercase text-slate-500 mt-2">Advogados Associados · OAB/SC 4011/2017</p>
+          <p class="mt-5 text-sm text-slate-400 leading-relaxed">Advocacia artesanal, próxima e em linguagem clara.<br />Joinville · Santa Catarina.</p>
+        </div>
+        <div class="text-sm text-slate-400">
+          <p class="text-[11px] tracking-widest uppercase text-slate-500 mb-3">Navegação</p>
+          <ul class="space-y-1.5">
+            <li><a href="#casa" class="hover:text-white">A Casa</a></li>
+            <li><a href="#historias" class="hover:text-white">Histórias</a></li>
+            <li><a href="#capitulos" class="hover:text-white">Atuação</a></li>
+            <li><a href="#time" class="hover:text-white">O Time</a></li>
+          </ul>
+        </div>
+        <div class="text-sm text-slate-400">
+          <p class="text-[11px] tracking-widest uppercase text-slate-500 mb-3">Fale conosco</p>
+          <ul class="space-y-1.5">
+            <li>(47) 99233-1111</li>
+            <li>contato@demattia.com.br</li>
+            <li><a href="#" class="hover:text-white">LinkedIn</a></li>
+          </ul>
+          <div class="mt-4 h-20 border border-dashed border-slate-700 rounded-lg flex items-center justify-center text-[11px] text-slate-600">[ Mapa / Endereço ]</div>
+        </div>
+      </div>
+      <div class="mt-12 pt-6 border-t border-slate-800 flex flex-col md:flex-row justify-between gap-2 text-xs text-slate-500">
+        <span>© De Mattia Advogados Associados. Todos os direitos reservados.</span>
+        <span>Conteúdo informativo em conformidade com o Código de Ética da OAB.</span>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Conceitos de Redesign · De Mattia Advogados Associados</title>
+  <meta name="description" content="Apresentação dos três conceitos de wireframe para o novo site da De Mattia Advogados Associados. Desenvolvido pela Agência Kamino." />
+  <meta name="robots" content="noindex, nofollow" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Conceitos de Redesign · De Mattia Advogados" />
+  <meta property="og:description" content="Três direções criativas para o novo site. Escolha um conceito para visualizar o wireframe completo." />
+  <meta property="og:type" content="website" />
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,400;9..144,500&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            serif: ['Fraunces', 'Georgia', 'serif'],
+            sans: ['"DM Sans"', 'system-ui', 'sans-serif'],
+          },
+        },
+      },
+    };
+  </script>
+
+  <style>
+    html { scroll-behavior: smooth; }
+    @keyframes rise {
+      from { opacity: 0; transform: translateY(18px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+    .reveal { opacity: 0; animation: rise 0.7s cubic-bezier(0.22, 1, 0.36, 1) forwards; }
+    .d-1 { animation-delay: 0.05s; }
+    .d-2 { animation-delay: 0.15s; }
+    .d-3 { animation-delay: 0.25s; }
+    .d-4 { animation-delay: 0.35s; }
+    .d-5 { animation-delay: 0.45s; }
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      .reveal { animation: none; opacity: 1; }
+    }
+  </style>
+</head>
+
+<body class="bg-stone-50 text-slate-900 font-sans antialiased selection:bg-slate-900 selection:text-white">
+
+  <!-- ============================ HEADER ============================ -->
+  <header class="border-b border-slate-200">
+    <div class="max-w-5xl mx-auto px-6 h-20 flex items-center justify-between">
+      <div class="text-base tracking-[0.22em] uppercase font-medium text-slate-900">
+        De&nbsp;Mattia
+        <span class="block text-[10px] tracking-[0.3em] text-slate-400 font-normal">Advogados Associados</span>
+      </div>
+      <div class="flex items-center gap-2.5 text-xs tracking-[0.2em] uppercase text-slate-400">
+        <span class="hidden sm:inline">Apresentação por</span>
+        <span class="font-medium text-slate-700">Agência Kamino</span>
+      </div>
+    </div>
+  </header>
+
+  <!-- ============================ HERO ============================ -->
+  <section class="max-w-3xl mx-auto px-6 pt-24 pb-16 md:pt-32 md:pb-20 text-center">
+    <p class="reveal d-1 text-xs tracking-[0.35em] uppercase text-slate-500 mb-8">Proposta de redesign · 2026</p>
+    <h1 class="reveal d-2 font-serif text-4xl md:text-6xl leading-[1.08] font-light text-slate-900">
+      Três caminhos para o<br class="hidden md:block" /> novo site do escritório.
+    </h1>
+    <p class="reveal d-3 mt-8 text-lg text-slate-600 max-w-xl mx-auto font-light leading-relaxed">
+      Desenvolvemos três conceitos distintos de estrutura e hierarquia para o site da De&nbsp;Mattia.
+      Explore cada um abaixo e nos diga qual direção mais conversa com a identidade do escritório.
+    </p>
+    <div class="reveal d-4 mt-10 inline-flex items-center gap-2 text-xs tracking-wider uppercase text-slate-400 border border-slate-200 rounded-full px-4 py-2">
+      <span class="w-1.5 h-1.5 rounded-full bg-slate-400"></span>
+      Wireframes lo-fi · cores e fotos são placeholders
+    </div>
+  </section>
+
+  <!-- ============================ CONCEITOS ============================ -->
+  <main class="max-w-5xl mx-auto px-6 pb-28">
+    <div class="grid md:grid-cols-3 gap-6">
+
+      <!-- Conceito 1 -->
+      <a href="layout1-premium.html"
+         class="reveal d-3 group flex flex-col bg-white border border-slate-200 rounded-2xl p-8 transition-all duration-300 hover:-translate-y-1.5 hover:shadow-xl hover:shadow-slate-900/5 hover:border-slate-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-slate-900 focus-visible:ring-offset-2 focus-visible:ring-offset-stone-50">
+        <div class="flex items-baseline justify-between mb-8">
+          <span class="font-serif text-5xl font-light text-slate-200 tabular-nums group-hover:text-slate-300 transition-colors">01</span>
+          <span class="text-[10px] tracking-[0.25em] uppercase text-slate-400">Minimalista</span>
+        </div>
+        <h2 class="font-serif text-2xl font-normal text-slate-900 leading-snug">A Autoridade Serena</h2>
+        <p class="mt-3 text-sm text-slate-500 leading-relaxed flex-1">
+          Premium e minimalista. Texto-protagonista, muito espaço em branco e tipografia leve.
+          Transmite sobriedade e confiança sem ruído.
+        </p>
+        <span class="mt-8 inline-flex items-center gap-2 text-xs tracking-widest uppercase text-slate-900 border-b border-slate-900 pb-1 self-start group-hover:gap-3 transition-all">
+          Ver wireframe <span aria-hidden="true">→</span>
+        </span>
+      </a>
+
+      <!-- Conceito 2 -->
+      <a href="layout2-moderno.html"
+         class="reveal d-4 group flex flex-col bg-white border border-slate-200 rounded-2xl p-8 transition-all duration-300 hover:-translate-y-1.5 hover:shadow-xl hover:shadow-slate-900/5 hover:border-slate-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-slate-900 focus-visible:ring-offset-2 focus-visible:ring-offset-stone-50">
+        <div class="flex items-baseline justify-between mb-8">
+          <span class="font-serif text-5xl font-light text-slate-200 tabular-nums group-hover:text-slate-300 transition-colors">02</span>
+          <span class="text-[10px] tracking-[0.25em] uppercase text-slate-400">Executivo</span>
+        </div>
+        <h2 class="font-serif text-2xl font-normal text-slate-900 leading-snug">Estratégico Executivo</h2>
+        <p class="mt-3 text-sm text-slate-500 leading-relaxed flex-1">
+          Sofisticação por contraste. Hero dividido, tipografia display gigante, assimetria
+          e blocos de impacto com números grandes. Energia e direção.
+        </p>
+        <span class="mt-8 inline-flex items-center gap-2 text-xs tracking-widest uppercase text-slate-900 border-b border-slate-900 pb-1 self-start group-hover:gap-3 transition-all">
+          Ver wireframe <span aria-hidden="true">→</span>
+        </span>
+      </a>
+
+      <!-- Conceito 3 -->
+      <a href="layout3-editorial.html"
+         class="reveal d-5 group flex flex-col bg-white border border-slate-200 rounded-2xl p-8 transition-all duration-300 hover:-translate-y-1.5 hover:shadow-xl hover:shadow-slate-900/5 hover:border-slate-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-slate-900 focus-visible:ring-offset-2 focus-visible:ring-offset-stone-50">
+        <div class="flex items-baseline justify-between mb-8">
+          <span class="font-serif text-5xl font-light text-slate-200 tabular-nums group-hover:text-slate-300 transition-colors">03</span>
+          <span class="text-[10px] tracking-[0.25em] uppercase text-slate-400">Editorial</span>
+        </div>
+        <h2 class="font-serif text-2xl font-normal text-slate-900 leading-snug">Monografia Editorial</h2>
+        <p class="mt-3 text-sm text-slate-500 leading-relaxed flex-1">
+          Estética de revista premium. Masthead, manifesto com capitular, capítulos numerados
+          e pull quotes. Erudição e profundidade de conteúdo.
+        </p>
+        <span class="mt-8 inline-flex items-center gap-2 text-xs tracking-widest uppercase text-slate-900 border-b border-slate-900 pb-1 self-start group-hover:gap-3 transition-all">
+          Ver wireframe <span aria-hidden="true">→</span>
+        </span>
+      </a>
+
+    </div>
+
+    <!-- Nota de orientação -->
+    <div class="reveal d-5 mt-16 max-w-2xl mx-auto text-center">
+      <p class="text-sm text-slate-500 leading-relaxed">
+        <span class="font-medium text-slate-700">Como avaliar:</span> os wireframes mostram a
+        <em>estrutura</em> e a <em>jornada</em> de cada conceito — não as cores nem as fotos finais.
+        Foque na organização das seções, no tom e na sensação geral de cada direção.
+      </p>
+    </div>
+  </main>
+
+  <!-- ============================ RODAPÉ ============================ -->
+  <footer class="border-t border-slate-200">
+    <div class="max-w-5xl mx-auto px-6 py-10 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-slate-400">
+      <span class="tracking-wider uppercase">De Mattia Advogados Associados · Joinville/SC</span>
+      <span class="tracking-wider uppercase">Concepção &amp; design · <span class="text-slate-600 font-medium">Agência Kamino</span></span>
+    </div>
+  </footer>
+
+</body>
+</html>
