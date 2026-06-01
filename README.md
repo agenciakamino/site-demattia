@@ -1,12 +1,11 @@
 # Site De Mattia Advogados — Conceitos de Redesign
 
-Apresentação dos **três conceitos de wireframe** para o novo site da
+Apresentação dos **três conceitos** para o novo site da
 **De Mattia Advogados Associados** (Joinville/SC), desenvolvidos pela
 **Agência Kamino**.
 
-> Wireframes lo-fi em escala de cinza. As cores de marca, fotos e conteúdo
-> final são placeholders — o objetivo nesta fase é validar **estrutura,
-> hierarquia e jornada de conversão**.
+> Nesta etapa o foco é validar a **estrutura, o tom e a direção** de cada
+> conceito. Cores de marca, fotos e textos finais entram na próxima fase.
 
 ## 🔗 Ver online
 
@@ -15,7 +14,7 @@ A apresentação está publicada via GitHub Pages:
 **https://agenciakamino.github.io/site-demattia/**
 
 A página inicial apresenta os três conceitos. Clique em cada card para abrir o
-wireframe completo.
+conceito completo.
 
 ## 📐 Os três conceitos
 
