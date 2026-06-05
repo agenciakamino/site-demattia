@@ -73,9 +73,18 @@ export default function RootLayout({
   return (
     <html
       lang="pt-BR"
+      suppressHydrationWarning
       className={`${geist.variable} ${geistMono.variable} ${fraunces.variable} h-full antialiased`}
     >
       <body className="flex min-h-full flex-col font-sans">
+        {/* Marca o documento como "JS ativo" ANTES do 1º paint: habilita o estado
+            oculto dos reveals (globals.css → `.js [data-reveal]`) sem flash e
+            mantém o conteúdo visível quando não há JS. */}
+        <script
+          dangerouslySetInnerHTML={{
+            __html: "document.documentElement.classList.add('js')",
+          }}
+        />
         <OrgJsonLd />
         <span id="top" className="absolute top-0" aria-hidden />
         <Header />
