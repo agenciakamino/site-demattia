@@ -87,11 +87,18 @@
   }
 
   html {
-    scroll-behavior: smooth;
     /* compensa o header fixo ao navegar por âncoras */
     scroll-padding-top: 6rem;
     -webkit-font-smoothing: antialiased;
-    text-rendering: optimizeLegibility;
+    /* `optimizeLegibility` força kerning/ligaduras em TODO o documento e encarece
+       o paint em páginas longas (jank de scroll). `auto` deixa o browser decidir
+       (mantém kerning da fonte via font-kerning, sem o custo global) — equilíbrio
+       entre leveza e a tipografia serifada premium. */
+    text-rendering: auto;
+    /* NB: `scroll-behavior: smooth` foi removido — como global, o smooth nativo
+       transforma cada salto de âncora/topo numa animação de ~700ms (delay
+       perceptível). Âncoras agora são instantâneas (snappy). Se um smooth
+       controlado for desejado, implementar via JS com duração ≤300ms. */
   }
 
   body {

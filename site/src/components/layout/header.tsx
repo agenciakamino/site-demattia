@@ -41,7 +41,7 @@ export function Header() {
   return (
     <header
       className={cn(
-        "fixed inset-x-0 top-0 z-50 transition-all duration-500",
+        "fixed inset-x-0 top-0 z-50 transition-[background-color,border-color] duration-300",
         overHero
           ? "border-b border-transparent bg-transparent"
           : "border-b border-hairline bg-paper/85 backdrop-blur-md supports-[backdrop-filter]:bg-paper/70",
