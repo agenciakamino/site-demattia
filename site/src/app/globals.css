@@ -1,0 +1,126 @@
+@import "tailwindcss";
+
+/*
+  ============================================================================
+  DE MATTIA ADVOGADOS — DESIGN TOKENS
+  Marca oficial: navy #221E45 (espinha dorsal) + amarelo #FFF369 (joia, dosado).
+  Fundo papel quente #FBFAF7. O amarelo NUNCA como texto sobre claro.
+  ============================================================================
+*/
+
+:root {
+  /* — Marca (raw) — */
+  --navy: #221e45;
+  --navy-deep: #191634;
+  --gold: #fff369;
+  --paper: #fbfaf7;
+  --ink: #2a2742;
+  --faint: #6b6880;
+  --hairline: #e7e4dc;
+
+  /* — Semânticos (shadcn/ui) mapeados à marca — */
+  --radius: 0.5rem;
+  --background: var(--paper);
+  --foreground: var(--ink);
+  --card: #ffffff;
+  --card-foreground: var(--ink);
+  --popover: var(--paper);
+  --popover-foreground: var(--ink);
+  --primary: var(--navy);
+  --primary-foreground: #fbfaf7;
+  --secondary: #eeecf2;
+  --secondary-foreground: var(--navy);
+  --muted: #f1efea;
+  --muted-foreground: var(--faint);
+  --accent: #efece4;
+  --accent-foreground: var(--navy);
+  --destructive: #b4232a;
+  --border: var(--hairline);
+  --input: var(--hairline);
+  --ring: var(--navy);
+}
+
+@theme inline {
+  /* — Tipografia — */
+  --font-sans: var(--font-geist), ui-sans-serif, system-ui, sans-serif;
+  --font-display: var(--font-fraunces), ui-serif, Georgia, serif;
+  --font-mono: var(--font-geist-mono), ui-monospace, monospace;
+
+  /* — Utilitários de marca (bg-navy, text-ink, border-hairline, etc.) — */
+  --color-navy: var(--navy);
+  --color-navy-deep: var(--navy-deep);
+  --color-gold: var(--gold);
+  --color-paper: var(--paper);
+  --color-ink: var(--ink);
+  --color-faint: var(--faint);
+  --color-hairline: var(--hairline);
+
+  /* — Semânticos (shadcn) — */
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+
+  --radius-sm: calc(var(--radius) - 2px);
+  --radius-md: var(--radius);
+  --radius-lg: calc(var(--radius) + 4px);
+  --radius-xl: calc(var(--radius) + 8px);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/40;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    /* compensa o header fixo ao navegar por âncoras */
+    scroll-padding-top: 6rem;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-feature-settings: "ss01", "cv01";
+  }
+
+  /* Números tabulares (OAB / dígitos alinhados) */
+  .nums {
+    font-variant-numeric: tabular-nums;
+  }
+
+  /* Respeita usuários que pedem menos movimento */
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+    }
+  }
+}
+
+/* Display serifado com optical sizing — "carta timbrada de luxo" */
+.font-display {
+  font-family: var(--font-display);
+  font-optical-sizing: auto;
+}
