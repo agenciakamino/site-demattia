@@ -17,7 +17,7 @@ export function Manifesto() {
           </p>
         </Reveal>
         <Reveal delay={0.2}>
-          <span aria-hidden className="mx-auto mt-10 block h-px w-14 bg-gold" />
+          <span aria-hidden className="mx-auto mt-10 block h-0.5 w-14 bg-gold" />
           <ul className="mt-7 flex flex-wrap items-center justify-center gap-x-8 gap-y-3 text-xs font-medium uppercase tracking-[0.22em] text-faint">
             {MANIFESTO.pillars.map((pillar) => (
               <li key={pillar}>{pillar}</li>

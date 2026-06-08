@@ -1,7 +1,11 @@
 import { Stagger, StaggerItem } from "@/components/primitives/reveal";
 import { SECTORS } from "@/lib/content";
 
-/** Grade dos setores representados. Reutilizada na home (teaser) e em /quem-representamos. */
+/**
+ * Lista de setores representados em estilo bullet (marcador dourado + rótulo),
+ * fluindo em múltiplas colunas — leve e editorial, sem a "caixa" emoldurada.
+ * Reutilizada na home (teaser) e em /quem-representamos.
+ */
 export function SectorGrid({
   sectors = SECTORS,
 }: {
@@ -10,19 +14,19 @@ export function SectorGrid({
   return (
     <Stagger
       as="ul"
-      className="grid grid-cols-2 gap-px overflow-hidden rounded-xl border border-hairline bg-hairline sm:grid-cols-3 lg:grid-cols-4"
+      className="grid grid-cols-2 gap-x-8 gap-y-3.5 sm:gap-x-10 lg:grid-cols-3 lg:gap-y-4 xl:grid-cols-4"
     >
       {sectors.map((sector) => (
         <StaggerItem as="li" key={sector}>
-          <div className="group flex h-full items-center gap-3 bg-card px-5 py-5 transition-colors duration-300 hover:bg-paper">
+          <span className="group flex items-start gap-3">
             <span
               aria-hidden
-              className="h-1.5 w-1.5 shrink-0 rounded-full bg-hairline transition-colors duration-300 group-hover:bg-gold"
+              className="mt-[0.4rem] h-1.5 w-1.5 shrink-0 rounded-full bg-gold transition-transform duration-300 group-hover:scale-150"
             />
-            <span className="text-pretty text-sm leading-snug text-ink/85 transition-colors duration-300 group-hover:text-navy">
+            <span className="text-pretty text-[0.95rem] leading-snug text-ink/80 transition-colors duration-300 group-hover:text-navy">
               {sector}
             </span>
-          </div>
+          </span>
         </StaggerItem>
       ))}
     </Stagger>

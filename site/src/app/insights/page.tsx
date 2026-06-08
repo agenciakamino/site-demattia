@@ -29,7 +29,6 @@ export default function InsightsPage() {
         title={PAGES.insights.title}
         subtitle={PAGES.insights.subtitle}
         trail={TRAIL}
-        align="center"
       />
 
       <Section space="default">

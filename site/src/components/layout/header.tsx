@@ -12,9 +12,10 @@ import {
   SheetClose,
 } from "@/components/ui/sheet";
 import { Brand } from "./brand";
+import { Container } from "@/components/primitives/container";
+import { Cta } from "@/components/primitives/cta";
 import { NAV_LINKS } from "@/lib/content";
 import { whatsappUrl } from "@/lib/site-config";
-import { trackWhatsappClick } from "@/lib/tracking";
 import { cn } from "@/lib/utils";
 
 function useIsActive(pathname: string) {
@@ -47,35 +48,48 @@ export function Header() {
           : "border-b border-hairline bg-paper/85 backdrop-blur-md supports-[backdrop-filter]:bg-paper/70",
       )}
     >
-      <div className="mx-auto flex h-20 w-full max-w-6xl items-center justify-between px-6 md:px-8">
+      <Container size="xl" className="flex h-20 items-center gap-6">
         <Link
           href="/"
           title="Ir para o início"
+          onClick={(e) => {
+            // Já na home: não recarrega rota — só sobe suave ao topo.
+            // (Navegando de outra página, o Next já leva ao topo.)
+            if (pathname === "/") {
+              e.preventDefault();
+              window.scrollTo({ top: 0, behavior: "smooth" });
+            }
+          }}
           className="rounded-sm outline-none focus-visible:ring-2 focus-visible:ring-navy focus-visible:ring-offset-2 focus-visible:ring-offset-paper"
         >
           <Brand variant="light" />
         </Link>
 
-        {/* Navegação desktop */}
-        <nav className="hidden items-center gap-9 lg:flex">
+        {/* Links centralizados na zona do meio (flex-1) — equilibra o vão
+            entre marca e CTA. Gap fluido para caber a partir de 1024px. */}
+        <nav className="hidden flex-1 items-center justify-center gap-5 lg:flex xl:gap-8">
           {NAV_LINKS.map((link) => (
             <NavLink key={link.href} href={link.href} active={isActive(link.href)}>
               {link.label}
             </NavLink>
           ))}
-          <a
-            href={whatsappUrl()}
-            target="_blank"
-            rel="noopener noreferrer"
-            onClick={() => trackWhatsappClick("header")}
-            className="group relative ml-1 inline-flex items-center bg-navy px-5 py-2.5 text-[0.78rem] font-medium uppercase tracking-[0.12em] text-paper outline-none transition-colors hover:bg-navy-deep focus-visible:ring-2 focus-visible:ring-navy focus-visible:ring-offset-2 focus-visible:ring-offset-paper"
-          >
-            Fale com um especialista
-          </a>
         </nav>
 
+        {/* CTA ancorado à direita */}
+        <Cta
+          href={whatsappUrl()}
+          target="_blank"
+          rel="noopener noreferrer"
+          size="sm"
+          track="whatsapp"
+          source="header"
+          className="hidden lg:inline-flex"
+        >
+          Fale com um especialista
+        </Cta>
+
         {/* Gatilho mobile */}
-        <div className="lg:hidden">
+        <div className="ml-auto lg:hidden">
           <Sheet open={open} onOpenChange={setOpen}>
             <SheetTrigger
               aria-label="Abrir menu"
@@ -106,21 +120,22 @@ export function Header() {
                   ))}
                 </nav>
                 <div className="border-t border-hairline p-6">
-                  <a
+                  <Cta
                     href={whatsappUrl()}
                     target="_blank"
                     rel="noopener noreferrer"
-                    onClick={() => trackWhatsappClick("mobile_menu")}
-                    className="flex w-full items-center justify-center bg-navy px-6 py-4 text-[0.78rem] font-medium uppercase tracking-[0.18em] text-paper outline-none transition-colors hover:bg-navy-deep focus-visible:ring-2 focus-visible:ring-navy focus-visible:ring-offset-2 focus-visible:ring-offset-paper"
+                    track="whatsapp"
+                    source="mobile_menu"
+                    className="w-full"
                   >
                     Fale com um especialista
-                  </a>
+                  </Cta>
                 </div>
               </div>
             </SheetContent>
           </Sheet>
         </div>
-      </div>
+      </Container>
     </header>
   );
 }
@@ -139,14 +154,14 @@ function NavLink({
       href={href}
       aria-current={active ? "page" : undefined}
       className={cn(
-        "group relative text-sm outline-none transition-colors hover:text-navy focus-visible:text-navy",
+        "group relative whitespace-nowrap text-sm outline-none transition-colors hover:text-navy focus-visible:text-navy",
         active ? "text-navy" : "text-ink/80",
       )}
     >
       {children}
       <span
         className={cn(
-          "absolute -bottom-1 left-0 h-px w-full origin-left bg-gold transition-transform duration-300",
+          "absolute -bottom-1 left-0 h-0.5 w-full origin-left bg-gold transition-transform duration-300",
           active ? "scale-x-100" : "scale-x-0 group-hover:scale-x-100 group-focus-visible:scale-x-100",
         )}
       />

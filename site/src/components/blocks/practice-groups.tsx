@@ -39,11 +39,11 @@ export function PracticeGroups() {
               <StaggerItem as="li" key={item.slug}>
                 <Link
                   href={`/areas-de-atuacao/${group.slug}/${item.slug}`}
-                  className="group relative grid grid-cols-[auto_1fr_auto] items-baseline gap-x-5 border-t border-hairline py-7 outline-none transition-colors first:border-t-0 focus-visible:bg-navy/[0.03] md:py-8"
+                  className="group relative grid grid-cols-[auto_1fr_auto] items-baseline gap-x-5 border-t border-hairline py-7 pl-5 outline-none transition-colors first:border-t-0 focus-visible:bg-navy/[0.03] md:py-8 md:pl-7"
                 >
                   <span
                     aria-hidden
-                    className="absolute left-0 top-7 h-0 w-px bg-gold transition-all duration-500 group-hover:h-[calc(100%-3.5rem)] md:top-8"
+                    className="absolute left-0 top-7 h-0 w-0.5 bg-gold transition-all duration-500 group-hover:h-[calc(100%-3.5rem)] md:top-8"
                   />
                   <span className="nums pt-1 text-sm font-medium tabular-nums text-faint/70 transition-colors duration-300 group-hover:text-navy">
                     {String(i + 1).padStart(2, "0")}

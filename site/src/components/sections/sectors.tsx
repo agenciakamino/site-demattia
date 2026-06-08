@@ -9,8 +9,10 @@ import { SECTORS } from "@/lib/content";
 /** Teaser de setores na home — mostra um recorte e leva à página dedicada. */
 export function Sectors() {
   const teaser = SECTORS.slice(0, 12);
+  // Topo aparado (pt-*) — pareado com o pb de PracticeAreas para uma costura
+  // equilibrada. Mantém o divisor (bordered) e o respiro de baixo.
   return (
-    <Section id="setores" tone="card" bordered space="loose">
+    <Section id="setores" tone="card" bordered space="loose" className="pt-16 md:pt-24">
       <Container size="xl">
         <Reveal className="max-w-2xl">
           <Eyebrow>Quem nós representamos</Eyebrow>

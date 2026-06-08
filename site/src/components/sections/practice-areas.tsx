@@ -7,8 +7,10 @@ import { PracticeGroups } from "@/components/blocks/practice-groups";
 import { PRACTICE_PARTNERS_NOTE } from "@/lib/content";
 
 export function PracticeAreas() {
+  // Bottom aparado (pb-*) para fechar a costura com Sectors — evita o vão
+  // duplicado de duas seções `loose` consecutivas. Topo segue generoso.
   return (
-    <Section id="atuacao" space="loose">
+    <Section id="atuacao" space="loose" className="pb-16 md:pb-20">
       <Container size="xl">
         <Reveal className="mx-auto max-w-2xl text-center">
           <Eyebrow className="justify-center">Áreas de atuação</Eyebrow>

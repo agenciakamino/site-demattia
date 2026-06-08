@@ -20,7 +20,7 @@ export function AuthorityStrip() {
               key={seal.label}
               className="flex flex-col items-center text-center"
             >
-              <span aria-hidden className="mb-3 h-px w-5 bg-gold/70" />
+              <span aria-hidden className="mb-3 h-0.5 w-6 bg-gold" />
               <span className="font-display text-base text-navy">{seal.label}</span>
               <span className="mt-1 text-xs uppercase tracking-[0.12em] text-faint">
                 {seal.note}

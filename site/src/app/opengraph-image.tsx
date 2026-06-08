@@ -8,6 +8,9 @@ import { SITE } from "@/lib/site-config";
   ▶ Quando o cliente enviar o logo vetorial, trocar o monograma "DM" por <img>.
 */
 
+// Gerado estaticamente no build (necessário com output: "export").
+export const dynamic = "force-static";
+
 export const alt = `${SITE.name} — ${SITE.slogan}`;
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";

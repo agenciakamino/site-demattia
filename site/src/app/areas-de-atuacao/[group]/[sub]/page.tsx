@@ -53,12 +53,14 @@ export default async function SubAreaPage({ params }: Params) {
   return (
     <>
       <BreadcrumbJsonLd trail={trail} />
-      <PageHero eyebrow={group.group} title={item.title} trail={trail}>
-        <p className="mt-6 max-w-2xl text-pretty text-lg leading-relaxed text-faint">
-          {item.description}
-        </p>
+      <PageHero
+        eyebrow={group.group}
+        title={item.title}
+        subtitle={item.description}
+        trail={trail}
+      >
         <div className="mt-8">
-          <SectionLink href={`/areas-de-atuacao/${group.slug}`}>
+          <SectionLink onDark href={`/areas-de-atuacao/${group.slug}`}>
             Voltar a {group.short}
           </SectionLink>
         </div>

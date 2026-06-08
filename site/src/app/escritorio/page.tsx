@@ -65,7 +65,7 @@ export default function EscritorioPage() {
                   sizes="(max-width: 768px) 100vw, 50vw"
                   className="object-cover grayscale transition-all duration-700 hover:grayscale-0"
                 />
-                <span aria-hidden className="absolute inset-x-0 bottom-0 h-px bg-gold/40" />
+                <span aria-hidden className="absolute inset-x-0 bottom-0 h-0.5 bg-gold/55" />
               </div>
             </Reveal>
 

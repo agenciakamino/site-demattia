@@ -12,7 +12,7 @@ export function QuoteBand({ quote }: { quote: string }) {
       />
       <Container size="md" className="relative text-center">
         <Reveal>
-          <span aria-hidden className="mx-auto mb-7 block h-px w-12 bg-gold" />
+          <span aria-hidden className="mx-auto mb-7 block h-0.5 w-12 bg-gold" />
           <blockquote className="font-display text-balance text-[clamp(1.6rem,3.6vw,2.6rem)] font-normal italic leading-[1.3] text-paper">
             “{quote}”
           </blockquote>

@@ -7,6 +7,7 @@ import { OrgJsonLd } from "@/components/json-ld";
 import { Header } from "@/components/layout/header";
 import { Footer } from "@/components/layout/footer";
 import { MobileActionBar } from "@/components/layout/mobile-action-bar";
+import { PageTransition } from "@/components/layout/page-transition";
 
 const geist = Geist({
   variable: "--font-geist",
@@ -88,7 +89,9 @@ export default function RootLayout({
         <OrgJsonLd />
         <span id="top" className="absolute top-0" aria-hidden />
         <Header />
-        <main className="flex-1">{children}</main>
+        <main className="flex-1">
+          <PageTransition>{children}</PageTransition>
+        </main>
         <Footer />
         {/* respiro para a barra fixa do mobile não cobrir o rodapé */}
         <div className="h-14 lg:hidden" aria-hidden />

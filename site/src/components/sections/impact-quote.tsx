@@ -14,7 +14,7 @@ export function ImpactQuote() {
 
       <Container size="md" className="relative text-center">
         <Reveal>
-          <span aria-hidden className="mx-auto mb-8 block h-px w-12 bg-gold" />
+          <span aria-hidden className="mx-auto mb-8 block h-0.5 w-12 bg-gold" />
           <blockquote className="font-display text-balance text-[clamp(1.9rem,4.5vw,3.4rem)] font-normal italic leading-[1.25] text-paper">
             “{IMPACT_QUOTE}”
           </blockquote>

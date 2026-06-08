@@ -30,7 +30,7 @@ export function Eyebrow({
       {tick && (
         <span
           aria-hidden
-          className="h-px w-6 bg-gold"
+          className="h-0.5 w-6 bg-gold"
         />
       )}
       {children}

@@ -39,7 +39,7 @@ export function PartnerCard({ partner }: { partner: Partner }) {
             </span>
           </div>
         )}
-        <span aria-hidden className="absolute inset-x-0 bottom-0 h-px bg-gold/40" />
+        <span aria-hidden className="absolute inset-x-0 bottom-0 h-0.5 bg-gold/55" />
       </div>
 
       <div className="mt-6">

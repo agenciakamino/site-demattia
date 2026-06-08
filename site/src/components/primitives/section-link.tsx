@@ -27,7 +27,7 @@ export function SectionLink({
     >
       <span className="relative">
         {children}
-        <span className="absolute -bottom-1 left-0 h-px w-full origin-left scale-x-0 bg-gold transition-transform duration-300 group-hover:scale-x-100 group-focus-visible:scale-x-100" />
+        <span className="absolute -bottom-1 left-0 h-0.5 w-full origin-left scale-x-0 bg-gold transition-transform duration-300 group-hover:scale-x-100 group-focus-visible:scale-x-100" />
       </span>
       <ArrowRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
     </Link>

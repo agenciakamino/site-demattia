@@ -2,6 +2,9 @@ import type { MetadataRoute } from "next";
 import { SITE } from "@/lib/site-config";
 import { PRACTICE_AREAS } from "@/lib/content";
 
+// Gerado estaticamente no build (necessário com output: "export").
+export const dynamic = "force-static";
+
 export default function sitemap(): MetadataRoute.Sitemap {
   const base = SITE.url;
 

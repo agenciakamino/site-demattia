@@ -15,7 +15,7 @@ export function FinalCta() {
       />
       <Container size="md" className="relative text-center">
         <Reveal>
-          <span aria-hidden className="mx-auto mb-8 block h-px w-12 bg-gold" />
+          <span aria-hidden className="mx-auto mb-8 block h-0.5 w-12 bg-gold" />
           <h2 className="font-display text-balance text-[clamp(1.9rem,4.5vw,3.4rem)] font-normal leading-[1.15] text-paper">
             {FINAL_CTA.title}
           </h2>
