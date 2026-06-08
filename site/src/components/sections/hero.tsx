@@ -8,28 +8,38 @@ import { whatsappUrl } from "@/lib/site-config";
 
 export function Hero() {
   return (
-    <section className="relative overflow-hidden pt-36 pb-20 md:pt-44 md:pb-28">
-      {/* Detalhe sutil: filete dourado vertical, "joia" dosada */}
+    <section className="relative isolate overflow-hidden bg-navy text-paper pt-36 pb-20 md:pt-44 md:pb-28">
+      {/* Fundo navy da marca — espelha o banner das páginas internas (PageHero). */}
       <div
         aria-hidden
-        className="pointer-events-none absolute inset-0 -z-10 bg-[radial-gradient(60%_50%_at_50%_-10%,rgba(34,30,69,0.05),transparent)]"
+        className="absolute inset-0 -z-10 bg-gradient-to-b from-navy to-navy-deep"
+      />
+      {/* "Joia" dosada: brilho dourado sutil no topo */}
+      <div
+        aria-hidden
+        className="pointer-events-none absolute inset-0 -z-10 bg-[radial-gradient(70%_60%_at_50%_-10%,rgba(255,243,105,0.10),transparent)]"
       />
 
       <Container size="md" className="text-center">
         <Stagger>
           <StaggerItem>
-            <Eyebrow className="justify-center">{HERO.eyebrow}</Eyebrow>
+            <Eyebrow onDark className="justify-center">{HERO.eyebrow}</Eyebrow>
           </StaggerItem>
 
           <StaggerItem>
-            <h1 className="font-display mt-8 text-balance text-[clamp(2.35rem,6vw,4.75rem)] font-normal leading-[1.06] tracking-[-0.01em] text-navy">
+            <h1 className="font-display mt-8 text-balance text-[clamp(2.35rem,6vw,4.75rem)] font-normal leading-[1.06] tracking-[-0.01em] text-paper">
               {HERO.title[0]}
-              <span className="mt-2 block text-ink/55">{HERO.title[1]}</span>
+              <span className="mt-2 block text-paper/55">{HERO.title[1]}</span>
             </h1>
           </StaggerItem>
 
           <StaggerItem>
-            <p className="mx-auto mt-9 max-w-xl text-pretty text-lg leading-relaxed text-faint">
+            {/* Filete dourado de assinatura — mesma marca dos banners internos */}
+            <span aria-hidden className="mx-auto mt-9 block h-0.5 w-12 bg-gold" />
+          </StaggerItem>
+
+          <StaggerItem>
+            <p className="mx-auto mt-7 max-w-xl text-pretty text-lg leading-relaxed text-paper/70">
               {HERO.subtitle}
             </p>
           </StaggerItem>
@@ -40,7 +50,7 @@ export function Hero() {
                 href={whatsappUrl()}
                 target="_blank"
                 rel="noopener noreferrer"
-                variant="solid"
+                variant="onNavy"
                 track="whatsapp"
                 source="hero"
               >
@@ -49,7 +59,7 @@ export function Hero() {
               </Cta>
               <a
                 href="#atuacao"
-                className="group inline-flex items-center gap-2 text-sm font-medium text-ink/70 outline-none transition-colors hover:text-navy focus-visible:text-navy"
+                className="group inline-flex items-center gap-2 text-sm font-medium text-paper/70 outline-none transition-colors hover:text-paper focus-visible:text-paper"
               >
                 Como atuamos
                 <span className="transition-transform duration-300 group-hover:translate-y-0.5">↓</span>
@@ -58,14 +68,14 @@ export function Hero() {
           </StaggerItem>
 
           <StaggerItem>
-            <p className="mx-auto mt-5 flex items-center justify-center gap-2 text-sm text-faint">
-              <ShieldCheck aria-hidden className="h-4 w-4 text-navy/60" />
+            <p className="mx-auto mt-5 flex items-center justify-center gap-2 text-sm text-paper/60">
+              <ShieldCheck aria-hidden className="h-4 w-4 text-gold/80" />
               Conversa inicial sob total sigilo — sem compromisso.
             </p>
           </StaggerItem>
 
           <StaggerItem>
-            <p className="nums mt-10 text-xs uppercase tracking-[0.25em] text-faint/80">
+            <p className="nums mt-10 text-xs uppercase tracking-[0.25em] text-paper/50">
               {HERO.credibility}
             </p>
           </StaggerItem>

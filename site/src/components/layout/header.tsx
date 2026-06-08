@@ -62,14 +62,19 @@ export function Header() {
           }}
           className="rounded-sm outline-none focus-visible:ring-2 focus-visible:ring-navy focus-visible:ring-offset-2 focus-visible:ring-offset-paper"
         >
-          <Brand variant="light" />
+          <Brand variant={overHero ? "dark" : "light"} />
         </Link>
 
         {/* Links centralizados na zona do meio (flex-1) — equilibra o vão
             entre marca e CTA. Gap fluido para caber a partir de 1024px. */}
         <nav className="hidden flex-1 items-center justify-center gap-5 lg:flex xl:gap-8">
           {NAV_LINKS.map((link) => (
-            <NavLink key={link.href} href={link.href} active={isActive(link.href)}>
+            <NavLink
+              key={link.href}
+              href={link.href}
+              active={isActive(link.href)}
+              onDark={overHero}
+            >
               {link.label}
             </NavLink>
           ))}
@@ -81,6 +86,7 @@ export function Header() {
           target="_blank"
           rel="noopener noreferrer"
           size="sm"
+          variant={overHero ? "onNavy" : "solid"}
           track="whatsapp"
           source="header"
           className="hidden lg:inline-flex"
@@ -93,7 +99,12 @@ export function Header() {
           <Sheet open={open} onOpenChange={setOpen}>
             <SheetTrigger
               aria-label="Abrir menu"
-              className="inline-flex h-10 w-10 items-center justify-center rounded-md text-navy outline-none transition-colors hover:bg-navy/5 focus-visible:ring-2 focus-visible:ring-navy"
+              className={cn(
+                "inline-flex h-10 w-10 items-center justify-center rounded-md outline-none transition-colors focus-visible:ring-2 focus-visible:ring-navy",
+                overHero
+                  ? "text-paper hover:bg-paper/10"
+                  : "text-navy hover:bg-navy/5",
+              )}
             >
               <Menu className="h-5 w-5" />
             </SheetTrigger>
@@ -143,10 +154,12 @@ export function Header() {
 function NavLink({
   href,
   active,
+  onDark = false,
   children,
 }: {
   href: string;
   active: boolean;
+  onDark?: boolean;
   children: React.ReactNode;
 }) {
   return (
@@ -154,8 +167,14 @@ function NavLink({
       href={href}
       aria-current={active ? "page" : undefined}
       className={cn(
-        "group relative whitespace-nowrap text-sm outline-none transition-colors hover:text-navy focus-visible:text-navy",
-        active ? "text-navy" : "text-ink/80",
+        "group relative whitespace-nowrap text-sm outline-none transition-colors",
+        onDark
+          ? active
+            ? "text-paper hover:text-paper focus-visible:text-paper"
+            : "text-paper/75 hover:text-paper focus-visible:text-paper"
+          : active
+            ? "text-navy hover:text-navy focus-visible:text-navy"
+            : "text-ink/80 hover:text-navy focus-visible:text-navy",
       )}
     >
       {children}
