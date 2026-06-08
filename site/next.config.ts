@@ -15,6 +15,8 @@ const nextConfig: NextConfig = {
   output: "export",
   trailingSlash: true,
   images: { unoptimized: true },
+  // Exposto ao bundle do cliente para prefixar srcs de imagem (lib/utils → asset()).
+  env: { NEXT_PUBLIC_BASE_PATH: isGhPages ? `/${repo}` : "" },
   ...(isGhPages ? { basePath: `/${repo}`, assetPrefix: `/${repo}/` } : {}),
 };
 

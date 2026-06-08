@@ -9,6 +9,7 @@ import { BreadcrumbJsonLd } from "@/components/json-ld";
 import { Testimonials } from "@/components/sections/testimonials";
 import { FinalCta } from "@/components/sections/final-cta";
 import { PAGES } from "@/lib/content";
+import { asset } from "@/lib/utils";
 
 export const metadata: Metadata = {
   title: "O escritório",
@@ -59,7 +60,7 @@ export default function EscritorioPage() {
                   do escritório (interna/sócios) quando o cliente enviar. */}
               <div className="relative aspect-[4/5] overflow-hidden rounded-2xl border border-hairline">
                 <Image
-                  src="/photos/fachada.jpeg"
+                  src={asset("/photos/fachada.jpeg")}
                   alt="Edifício onde fica o escritório De Mattia, em Joinville/SC"
                   fill
                   sizes="(max-width: 768px) 100vw, 50vw"

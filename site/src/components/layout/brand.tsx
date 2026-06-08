@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { cn } from "@/lib/utils";
+import { asset, cn } from "@/lib/utils";
 
 /*
   Lockup da marca composto: tile do monograma DM (asset autossuficiente, navy
@@ -27,7 +27,7 @@ export function Brand({
   return (
     <span className={cn("inline-flex items-center gap-3", className)}>
       <Image
-        src="/brand/logo-dm.png"
+        src={asset("/brand/logo-dm.png")}
         alt=""
         width={44}
         height={44}

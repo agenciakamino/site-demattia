@@ -6,6 +6,7 @@ import { LinkedInIcon, InstagramIcon } from "@/components/icons";
 import { Brand } from "./brand";
 import { NAV_LINKS } from "@/lib/content";
 import { SITE, MAILTO, TEL } from "@/lib/site-config";
+import { asset } from "@/lib/utils";
 
 export function Footer() {
   return (
@@ -69,7 +70,7 @@ export function Footer() {
                 profissional do escritório quando o cliente enviar. */}
             <div className="mt-6 flex items-start gap-4">
               <Image
-                src="/photos/fachada.jpeg"
+                src={asset("/photos/fachada.jpeg")}
                 alt="Fachada do edifício onde fica o escritório De Mattia, em Joinville"
                 width={72}
                 height={96}
