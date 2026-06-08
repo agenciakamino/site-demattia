@@ -28,8 +28,10 @@ export function Hero() {
 
           <StaggerItem>
             <h1 className="font-display mt-8 text-balance text-[clamp(2.35rem,6vw,4.75rem)] font-normal leading-[1.06] tracking-[-0.01em] text-paper">
-              {HERO.title[0]}
-              <span className="mt-2 block text-paper/55">{HERO.title[1]}</span>
+              <span className="text-paper/80">{HERO.title[0]}</span>
+              {/* Punchline destacada no dourado da marca — navy + gold é a
+                  assinatura do escritório e o ponto alto da mensagem. */}
+              <span className="mt-2 block text-gold">{HERO.title[1]}</span>
             </h1>
           </StaggerItem>
 
