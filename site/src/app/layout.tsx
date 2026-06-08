@@ -93,8 +93,6 @@ export default function RootLayout({
           <PageTransition>{children}</PageTransition>
         </main>
         <Footer />
-        {/* respiro para a barra fixa do mobile não cobrir o rodapé */}
-        <div className="h-14 lg:hidden" aria-hidden />
         <MobileActionBar />
         <Analytics />
       </body>

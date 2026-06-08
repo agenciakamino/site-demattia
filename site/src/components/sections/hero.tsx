@@ -1,4 +1,4 @@
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, ShieldCheck } from "lucide-react";
 import { Container } from "@/components/primitives/container";
 import { Eyebrow } from "@/components/primitives/eyebrow";
 import { Cta } from "@/components/primitives/cta";
@@ -44,7 +44,7 @@ export function Hero() {
                 track="whatsapp"
                 source="hero"
               >
-                Fale com um especialista
+                Agende um diagnóstico
                 <ArrowRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
               </Cta>
               <a
@@ -55,6 +55,13 @@ export function Hero() {
                 <span className="transition-transform duration-300 group-hover:translate-y-0.5">↓</span>
               </a>
             </div>
+          </StaggerItem>
+
+          <StaggerItem>
+            <p className="mx-auto mt-5 flex items-center justify-center gap-2 text-sm text-faint">
+              <ShieldCheck aria-hidden className="h-4 w-4 text-navy/60" />
+              Conversa inicial sob total sigilo — sem compromisso.
+            </p>
           </StaggerItem>
 
           <StaggerItem>

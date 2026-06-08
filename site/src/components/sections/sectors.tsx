@@ -8,7 +8,7 @@ import { SECTORS } from "@/lib/content";
 
 /** Teaser de setores na home — mostra um recorte e leva à página dedicada. */
 export function Sectors() {
-  const teaser = SECTORS.slice(0, 12);
+  const teaser = SECTORS.slice(0, 8);
   // Topo aparado (pt-*) — pareado com o pb de PracticeAreas para uma costura
   // equilibrada. Mantém o divisor (bordered) e o respiro de baixo.
   return (
@@ -34,7 +34,7 @@ export function Sectors() {
             <p className="text-sm italic text-faint">
               …e mais {SECTORS.length - teaser.length} setores.
             </p>
-            <SectionLink href="/quem-representamos">Ver todos os setores</SectionLink>
+            <SectionLink href="/quem-representamos" newTab>Ver todos os setores</SectionLink>
           </div>
         </Reveal>
       </Container>

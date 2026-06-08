@@ -1,4 +1,4 @@
-import { ArrowRight, Mail } from "lucide-react";
+import { ArrowRight, Mail, ShieldCheck } from "lucide-react";
 import { Container } from "@/components/primitives/container";
 import { Section } from "@/components/primitives/section";
 import { Cta } from "@/components/primitives/cta";
@@ -34,7 +34,7 @@ export function FinalCta() {
               track="whatsapp"
               source="final_cta"
             >
-              Fale com um especialista
+              Agende sua reunião
               <ArrowRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
             </Cta>
             <Cta
@@ -48,7 +48,11 @@ export function FinalCta() {
               Enviar e-mail
             </Cta>
           </div>
-          <p className="nums mt-8 text-xs uppercase tracking-[0.2em] text-paper/45">
+          <p className="mt-7 flex items-center justify-center gap-2 text-sm text-paper/70">
+            <ShieldCheck aria-hidden className="h-4 w-4 text-gold/80" />
+            Atendimento direto com os sócios, sob total sigilo.
+          </p>
+          <p className="nums mt-5 text-xs uppercase tracking-[0.2em] text-paper/45">
             {SITE.contact.email}
           </p>
         </Reveal>

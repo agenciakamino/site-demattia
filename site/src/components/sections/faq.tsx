@@ -8,7 +8,7 @@ import { FAQ as FAQ_ITEMS } from "@/lib/content";
 
 /** Teaser de FAQ na home — primeiras perguntas + link para a página completa. */
 export function Faq() {
-  const teaser = FAQ_ITEMS.slice(0, 6);
+  const teaser = FAQ_ITEMS.slice(0, 5);
   return (
     <Section id="faq" space="loose">
       <Container size="xl">
@@ -23,7 +23,7 @@ export function Faq() {
                 Reunimos as dúvidas mais comuns de quem procura assessoria jurídica
                 empresarial. São {FAQ_ITEMS.length} perguntas no total.
               </p>
-              <SectionLink href="/faq" className="mt-5">
+              <SectionLink href="/faq" className="mt-5" newTab>
                 Ver todas as perguntas
               </SectionLink>
             </div>

@@ -1,36 +1,34 @@
 "use client";
 
-import { MessageCircle, Phone } from "lucide-react";
-import { whatsappUrl, TEL } from "@/lib/site-config";
-import { trackWhatsappClick, trackCtaClick } from "@/lib/tracking";
+import { MessageCircle } from "lucide-react";
+import { whatsappUrl } from "@/lib/site-config";
+import { trackWhatsappClick } from "@/lib/tracking";
 
 /**
- * Barra de conversão fixa no rodapé em telas pequenas.
- * WhatsApp em NAVY (nunca verde-limão), conforme decisão do cliente.
+ * Botão flutuante de conversão em telas pequenas.
+ * Apenas o WhatsApp, em NAVY (nunca verde-limão), conforme decisão do cliente.
+ * Ancorado ao canto inferior direito, respeitando a safe-area do dispositivo.
  */
 export function MobileActionBar() {
   return (
-    <div className="fixed inset-x-0 bottom-0 z-40 border-t border-hairline bg-paper/90 backdrop-blur-md lg:hidden">
-      <div className="grid grid-cols-2 gap-px bg-hairline pb-[env(safe-area-inset-bottom)]">
-        <a
-          href={whatsappUrl()}
-          target="_blank"
-          rel="noopener noreferrer"
-          onClick={() => trackWhatsappClick("mobile_bar")}
-          className="flex items-center justify-center gap-2 bg-navy py-4 text-[0.8rem] font-medium uppercase tracking-[0.14em] text-paper outline-none transition-colors hover:bg-navy-deep focus-visible:bg-navy-deep"
-        >
-          <MessageCircle className="h-4 w-4" />
-          WhatsApp
-        </a>
-        <a
-          href={TEL}
-          onClick={() => trackCtaClick("call", "mobile_bar")}
-          className="flex items-center justify-center gap-2 bg-paper py-4 text-[0.8rem] font-medium uppercase tracking-[0.14em] text-navy outline-none transition-colors hover:bg-card focus-visible:bg-card"
-        >
-          <Phone className="h-4 w-4" />
-          Ligar
-        </a>
-      </div>
-    </div>
+    <a
+      href={whatsappUrl()}
+      target="_blank"
+      rel="noopener noreferrer"
+      onClick={() => trackWhatsappClick("mobile_fab")}
+      aria-label="Falar com um especialista no WhatsApp"
+      style={{
+        right: "max(1.25rem, env(safe-area-inset-right))",
+        bottom: "max(1.25rem, env(safe-area-inset-bottom))",
+      }}
+      className="group fixed z-40 inline-flex h-14 w-14 items-center justify-center rounded-full bg-navy text-paper shadow-lg shadow-navy/30 outline-none transition-[transform,background-color] duration-300 hover:bg-navy-deep focus-visible:ring-2 focus-visible:ring-navy focus-visible:ring-offset-2 focus-visible:ring-offset-paper active:scale-95 lg:hidden"
+    >
+      {/* Halo dourado sutil no entorno — "joia" dosada */}
+      <span
+        aria-hidden
+        className="pointer-events-none absolute inset-0 rounded-full ring-1 ring-gold/30"
+      />
+      <MessageCircle className="h-6 w-6 transition-transform duration-300 group-hover:scale-110" />
+    </a>
   );
 }
