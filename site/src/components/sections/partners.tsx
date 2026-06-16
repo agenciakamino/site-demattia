@@ -21,7 +21,7 @@ function initialsOf(name: string) {
  */
 export function Partners() {
   return (
-    <Section id="socios" space="loose">
+    <Section id="socios" space="loose" className="pb-14 md:pb-16">
       <Container size="xl">
         <Reveal className="mx-auto max-w-2xl text-center">
           <Eyebrow className="justify-center">Quem conduz o seu caso</Eyebrow>

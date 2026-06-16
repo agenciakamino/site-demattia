@@ -10,7 +10,7 @@ import { FAQ as FAQ_ITEMS } from "@/lib/content";
 export function Faq() {
   const teaser = FAQ_ITEMS.slice(0, 5);
   return (
-    <Section id="faq" space="loose">
+    <Section id="faq" space="loose" className="pt-14 md:pt-16">
       <Container size="xl">
         <div className="grid gap-12 lg:grid-cols-12 lg:gap-16">
           <Reveal className="lg:col-span-4">
