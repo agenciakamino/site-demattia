@@ -1,4 +1,3 @@
-import Image from "next/image";
 import Link from "next/link";
 import { MapPin } from "lucide-react";
 import { Container } from "@/components/primitives/container";
@@ -6,7 +5,6 @@ import { LinkedInIcon, InstagramIcon } from "@/components/icons";
 import { Brand } from "./brand";
 import { NAV_LINKS } from "@/lib/content";
 import { SITE, MAILTO, TEL } from "@/lib/site-config";
-import { asset } from "@/lib/utils";
 
 export function Footer() {
   return (
@@ -65,25 +63,13 @@ export function Footer() {
                 </a>
               </li>
             </ul>
-            {/* ▶ PLACEHOLDER: endereço sugerido pela fachada — [CONFIRMAR] com o cliente.
-                Foto real da fachada (Comercial Setracajo). Trocar por imagem
-                profissional do escritório quando o cliente enviar. */}
-            <div className="mt-6 flex items-start gap-4">
-              <Image
-                src={asset("/photos/fachada.jpeg")}
-                alt="Fachada do edifício onde fica o escritório De Mattia, em Joinville"
-                width={72}
-                height={96}
-                className="h-24 w-[72px] shrink-0 rounded-lg object-cover opacity-80 grayscale transition-all duration-500 hover:opacity-100 hover:grayscale-0"
-              />
-              <div className="flex items-start gap-2.5 text-sm text-paper/70">
-                <MapPin className="mt-0.5 h-4 w-4 shrink-0 text-paper/40" />
-                <p className="text-pretty leading-relaxed">
-                  {SITE.address.line1}
-                  <br />
-                  {SITE.address.line2}
-                </p>
-              </div>
+            <div className="mt-6 flex items-start gap-2.5 text-sm text-paper/70">
+              <MapPin className="mt-0.5 h-4 w-4 shrink-0 text-paper/40" />
+              <p className="text-pretty leading-relaxed">
+                {SITE.address.line1}
+                <br />
+                {SITE.address.line2}
+              </p>
             </div>
           </div>
         </div>
@@ -95,7 +81,7 @@ export function Footer() {
           </span>
           <span className="text-pretty">
             Conteúdo meramente informativo, em conformidade com o Código de Ética e
-            Disciplina da OAB (Provimento nº 205/2021).
+            Disciplina da OAB.
           </span>
         </div>
       </Container>

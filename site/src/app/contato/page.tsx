@@ -94,15 +94,16 @@ export default function ContatoPage() {
                   {SITE.address.line2}
                 </p>
               </div>
-              {/* ▶ PLACEHOLDER: embutir o Google Maps quando o endereço for confirmado. */}
-              <div className="mt-6 flex aspect-[16/10] items-center justify-center rounded-2xl border border-dashed border-hairline bg-muted/60 text-center text-xs text-faint">
-                <span className="max-w-[16rem] px-4">
-                  Mapa do escritório
-                  <br />
-                  <span className="text-faint/70">
-                    (a incluir após confirmação do endereço)
-                  </span>
-                </span>
+              {/* Mapa do escritório — endereço confirmado pelo cliente.
+                  Embed do Google Maps sem chave (output=embed). */}
+              <div className="mt-6 aspect-[16/10] overflow-hidden rounded-2xl border border-hairline">
+                <iframe
+                  title="Mapa do escritório De Mattia Advogados — Rua Ottokar Doerffel, 401, Sala 3, Joinville/SC"
+                  src="https://www.google.com/maps?q=Rua%20Ottokar%20Doerffel%2C%20401%2C%20Joinville%20-%20SC&output=embed"
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                  className="h-full w-full"
+                />
               </div>
             </Reveal>
           </div>

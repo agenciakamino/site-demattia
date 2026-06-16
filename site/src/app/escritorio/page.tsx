@@ -1,15 +1,12 @@
 import type { Metadata } from "next";
-import Image from "next/image";
 import { Container } from "@/components/primitives/container";
 import { Section } from "@/components/primitives/section";
 import { Eyebrow } from "@/components/primitives/eyebrow";
 import { PageHero } from "@/components/primitives/page-hero";
 import { Reveal, Stagger, StaggerItem } from "@/components/primitives/reveal";
 import { BreadcrumbJsonLd } from "@/components/json-ld";
-import { Testimonials } from "@/components/sections/testimonials";
 import { FinalCta } from "@/components/sections/final-cta";
-import { PAGES } from "@/lib/content";
-import { asset } from "@/lib/utils";
+import { PAGES, OFFICE_HIGHLIGHTS } from "@/lib/content";
 
 export const metadata: Metadata = {
   title: "O escritório",
@@ -56,16 +53,24 @@ export default function EscritorioPage() {
         <Container size="xl">
           <div className="grid items-center gap-12 md:grid-cols-2 md:gap-16">
             <Reveal>
-              {/* ▶ PLACEHOLDER: foto real da fachada. Trocar por foto profissional
-                  do escritório (interna/sócios) quando o cliente enviar. */}
-              <div className="relative aspect-[4/5] overflow-hidden rounded-2xl border border-hairline">
-                <Image
-                  src={asset("/photos/fachada.jpeg")}
-                  alt="Edifício onde fica o escritório De Mattia, em Joinville/SC"
-                  fill
-                  sizes="(max-width: 768px) 100vw, 50vw"
-                  className="object-cover grayscale transition-all duration-700 hover:grayscale-0"
-                />
+              {/* Painel de marca no lugar da foto da fachada — a foto anterior
+                  exibia outras empresas do prédio (inclusive outro escritório de
+                  advocacia). Trocar por foto profissional do escritório quando o
+                  cliente enviar a sessão fotográfica (Thaís / Bravus). */}
+              <div className="relative flex aspect-[4/5] flex-col justify-end overflow-hidden rounded-2xl border border-hairline bg-[radial-gradient(120%_90%_at_50%_0%,#221e45,#191634)] p-9 md:p-10">
+                <span
+                  aria-hidden
+                  className="font-display pointer-events-none absolute -right-3 -top-5 select-none text-[9rem] leading-none text-gold/10 md:text-[11rem]"
+                >
+                  DM
+                </span>
+                <p className="text-[0.65rem] font-medium uppercase tracking-[0.28em] text-paper/55">
+                  Joinville · Santa Catarina
+                </p>
+                <p className="font-display mt-4 text-balance text-xl font-normal leading-snug text-paper/90 md:text-2xl">
+                  Há duas décadas unindo solidez acadêmica e visão de mercado ao lado
+                  de empresas.
+                </p>
                 <span aria-hidden className="absolute inset-x-0 bottom-0 h-0.5 bg-gold/55" />
               </div>
             </Reveal>
@@ -95,7 +100,37 @@ export default function EscritorioPage() {
         </Container>
       </Section>
 
-      <Testimonials />
+      {/* Destaques do escritório — sugestão literal do cliente. Substitui a antiga
+          seção de depoimentos (prova social vedada pelo Código de Ética da OAB). */}
+      <Section tone="card" bordered space="loose">
+        <Container size="xl">
+          <Reveal className="mx-auto max-w-2xl text-center">
+            <Eyebrow className="justify-center">Por que o De Mattia</Eyebrow>
+            <h2 className="font-display mt-6 text-balance text-[clamp(1.7rem,3.5vw,2.5rem)] font-normal leading-tight text-navy">
+              Direito corporativo com profundidade técnica
+            </h2>
+          </Reveal>
+
+          <Stagger className="mt-14 grid gap-px overflow-hidden rounded-2xl border border-hairline bg-hairline md:grid-cols-3">
+            {OFFICE_HIGHLIGHTS.map((item, i) => (
+              <StaggerItem key={item.label} className="h-full">
+                <div className="flex h-full flex-col gap-5 bg-card p-8 md:p-9">
+                  <span className="nums font-display text-2xl font-normal leading-none text-gold">
+                    {String(i + 1).padStart(2, "0")}
+                  </span>
+                  <p className="text-[0.7rem] font-medium uppercase tracking-[0.2em] text-faint">
+                    {item.label}
+                  </p>
+                  <p className="font-display text-pretty text-lg font-normal leading-relaxed text-ink">
+                    {item.text}
+                  </p>
+                </div>
+              </StaggerItem>
+            ))}
+          </Stagger>
+        </Container>
+      </Section>
+
       <FinalCta />
     </>
   );

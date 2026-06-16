@@ -3,9 +3,11 @@ import { Stagger, StaggerItem } from "@/components/primitives/reveal";
 import { AUTHORITY_SEALS } from "@/lib/content";
 
 /*
-  Faixa de autoridade sutil. Hoje em formato tipográfico institucional.
-  ▶ PLACEHOLDER: quando o cliente enviar os selos oficiais (OAB, Ajorpeme,
-  Ielusc/UNIVILLE), trocar o texto de cada item por <Image> em escala de cinza.
+  Faixa de autoridade sutil, em formato tipográfico institucional.
+  Compliance OAB: citar apenas instituições jurídicas/acadêmicas e o Núcleo de
+  Advogados da Ajorpeme (não a Ajorpeme em si). ▶ PLACEHOLDER: se o cliente
+  enviar selos oficiais permitidos (ex.: OAB, instituição de ensino), trocar o
+  texto de cada item por <Image> em escala de cinza.
 */
 export function AuthorityStrip() {
   return (

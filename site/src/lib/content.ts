@@ -1,8 +1,8 @@
 /**
  * content.ts — Fonte única de toda a copy do site.
  * Texto LITERAL aprovado pelo cliente (briefing-cliente/01-pesquisa-cliente.md).
- * Nada aqui deve ser reescrito sem aprovação: respeita o Código de Ética da OAB
- * (Provimento 205/2021) — sem promessa de resultado, sem superlativos, sem preços.
+ * Nada aqui deve ser reescrito sem aprovação: respeita o Código de Ética e
+ * Disciplina da OAB — sem promessa de resultado, sem superlativos, sem preços.
  */
 
 export const SLOGAN = "Gestão jurídica aliada ao seu negócio.";
@@ -24,14 +24,14 @@ export const HERO = {
   title: ["Nosso trabalho não começa no processo.", "Começa antes do problema."],
   subtitle:
     "Gestão jurídica aliada ao seu negócio — segurança e previsibilidade para empresas que pensam a longo prazo.",
-  credibility: "OAB/SC · Ajorpeme · ~20 anos ao lado de empresas",
+  credibility: "OAB/SC · Núcleo de Advogados da Ajorpeme · ~20 anos ao lado de empresas",
 } as const;
 
 /* ------------------------------------------------- FAIXA DE AUTORIDADE -- */
 
 export const AUTHORITY_SEALS = [
   { label: "OAB Subseção Joinville", note: "Conselheiro" },
-  { label: "Ajorpeme", note: "Diretoria Executiva" },
+  { label: "Núcleo de Advogados da Ajorpeme", note: "Membro" },
   { label: "Professor de Direito", note: "Docência e palestras" },
   { label: "Mestrado", note: "Solidez acadêmica" },
 ] as const;
@@ -212,8 +212,8 @@ export const PARTNERS: Partner[] = [
     oab: "OAB/SC 22505",
     role: "Direito do Trabalho Patronal",
     anchor:
-      "Mestre · Professor de Direito · Diretoria Executiva da Ajorpeme · Conselheiro da OAB/SC (Joinville)",
-    bio: "Advogado especialista em Direito do Trabalho Patronal, com 20 anos de experiência na área, atuando na defesa dos empregadores. Possui especialização, mestrado e atua como professor de Direito e palestrante. É membro da Diretoria Executiva da Ajorpeme e Conselheiro da OAB/SC — Subseção de Joinville.",
+      "Mestre · Professor de Direito · Núcleo de Advogados da Ajorpeme · Conselheiro da OAB/SC (Joinville)",
+    bio: "Advogado especialista em Direito do Trabalho Patronal, com 20 anos de experiência na área, atuando na defesa dos empregadores. Possui especialização, mestrado e atua como professor de Direito e palestrante. Também atua na área cível, na assessoria de clientes corporativos, em especial contratos e relações comerciais. É Conselheiro da OAB/SC — Subseção de Joinville, e é membro do Núcleo de Advogados da Ajorpeme, o qual teve a honra de ser o presidente no ano de 2022.",
     photo: null, // [CONFIRMAR] retrato P&B do sócio (cliente enviará)
   },
   {
@@ -221,30 +221,29 @@ export const PARTNERS: Partner[] = [
     oab: "OAB/SC 22584",
     role: "Direito Cível Empresarial",
     anchor:
-      "Especialista em Processo Civil · Foco na área cível · Assessoria a sócios e familiares",
-    bio: "Advogada especialista em Processo Civil, com 20 anos de experiência na área, atuando na defesa de empresas dos mais variados segmentos. Possui especialização e está focada na área cível, assessorando diretamente sócios e seus familiares.",
+      "Especialista em Processo Civil · Foco na área cível · Assessoria consultiva e contenciosa",
+    bio: "Advogada especialista em Processo Civil, com 20 anos de experiência na área, atuando na defesa de empresas dos mais variados segmentos. Especialista na área cível, dedica-se à prevenção e resolução de conflitos, prestando assessoria consultiva e conduzindo demandas judiciais estratégicas para empresas, além de assessorar diretamente sócios e seus familiares.",
     photo: null, // [CONFIRMAR] retrato P&B da sócia (cliente enviará)
   },
 ];
 
-/* ------------------------------------------------- PROVA SOCIAL -------- */
-/* Anonimizada por segmento (Provimento 205/2021 — sem nome de cliente). */
+/* ----------------------------------------- DESTAQUES DO ESCRITÓRIO ----- */
+/* Sugestão LITERAL do cliente para a aba "Escritório" (feedback de 15/06/2026).
+   Substitui a antiga prova social: depoimentos de clientes não são permitidos
+   pelo Código de Ética e Disciplina da OAB. */
 
-export const TESTIMONIALS = [
+export const OFFICE_HIGHLIGHTS = [
   {
-    quote:
-      "Passamos a tratar o jurídico como parte da estratégia, não como apagar incêndio.",
-    segment: "Indústria metalmecânica",
+    label: "Contratos",
+    text: "Atuação estratégica na modelagem de contratos, reduzindo os riscos operacionais e garantindo segurança jurídica ao seu negócio.",
   },
   {
-    quote:
-      "Revisaram os nossos contratos e o passivo trabalhista antes que ele virasse problema.",
-    segment: "Empresa familiar",
+    label: "Experiência",
+    text: "Mais de 20 anos de atuação dedicada exclusivamente ao direito corporativo.",
   },
   {
-    quote:
-      "Finalmente uma assessoria que explica o que está acontecendo em linguagem que entendemos.",
-    segment: "Empresa de serviços",
+    label: "Equipe técnica",
+    text: "Equipe técnica especializada com sólida formação acadêmica e histórico em teses complexas.",
   },
 ] as const;
 
@@ -279,7 +278,7 @@ export const FAQ: FaqItem[] = [
   },
   {
     q: "Qual o diferencial do escritório De Mattia Advogados?",
-    a: "Nosso grande diferencial é a visão de negócios combinada à alta liderança técnica. Não somos um escritório de massa que entrega respostas padronizadas. Os clientes falam diretamente com os sócios (pessoalidade), que possuem 20 anos de experiência prática e acadêmica. Além disso, nossa imersão ativa no ecossistema empresarial local (Ajorpeme, OAB, BNI e outras entidades) nos permite entender as dores reais do empresário, entregando soluções que protegem o patrimônio sem engessar a operação da empresa.",
+    a: "Nosso grande diferencial é a visão de negócios combinada à alta liderança técnica. Não somos um escritório de massa que entrega respostas padronizadas. Os clientes falam diretamente com os sócios (pessoalidade), que possuem 20 anos de experiência prática e acadêmica. Além disso, nossa imersão ativa no ecossistema empresarial e jurídico local (Núcleo de Advogados da Ajorpeme, OAB e outras entidades) nos permite entender as dores reais do empresário, entregando soluções que protegem o patrimônio sem engessar a operação da empresa.",
   },
   {
     q: "Como a atuação no Direito do Trabalho Patronal pode ajudar o caixa da minha empresa?",

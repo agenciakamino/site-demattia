@@ -1,9 +1,8 @@
 /**
  * site-config.ts — Dados institucionais e de contato.
  *
- * ⚠️ TODOS os campos marcados [CONFIRMAR] são PLACEHOLDERS aguardando
- * validação do cliente (ver README → "Pendências"). Não publicar sem confirmar.
- * A foto da fachada indica: Comercial Setracajo, sala 401, Joinville/SC.
+ * Dados confirmados pelo cliente no feedback de 12–15/06/2026 (domínio, telefone
+ * e endereço completo). [CONFIRMAR] marca apenas o que ainda depende de validação.
  */
 
 export const SITE = {
@@ -14,24 +13,25 @@ export const SITE = {
   description:
     "Advocacia empresarial em Joinville/SC — Direito do Trabalho Patronal e Cível Empresarial. Gestão jurídica preventiva: segurança e previsibilidade para a sua empresa.",
 
-  // URL canônica — [CONFIRMAR] domínio definitivo do cliente
-  url: "https://www.demattia.adv.br",
+  // Domínio confirmado pelo cliente: demattia.com.br
+  url: "https://www.demattia.com.br",
   locale: "pt-BR",
 
   contact: {
-    // [CONFIRMAR] número/uso do WhatsApp comercial do escritório
-    whatsapp: "5547999999999",
-    whatsappDisplay: "(47) 99999-9999",
-    // [CONFIRMAR] telefone fixo comercial
-    phone: "+554700000000",
-    phoneDisplay: "(47) 0000-0000",
-    // [CONFIRMAR] e-mail institucional
-    email: "contato@demattia.adv.br",
+    // Telefone/WhatsApp confirmado pelo cliente
+    whatsapp: "5547992331111",
+    whatsappDisplay: "(47) 99233-1111",
+    phone: "+5547992331111",
+    phoneDisplay: "(47) 99233-1111",
+    // [CONFIRMAR] e-mail institucional no novo domínio (.com.br)
+    email: "contato@demattia.com.br",
   },
 
   address: {
-    // [CONFIRMAR] endereço completo (sugerido pela fachada)
-    line1: "Comercial Setracajo — Sala 401",
+    // Endereço completo confirmado pelo cliente
+    street: "Rua Ottokar Doerffel, 401",
+    suite: "Sala 3",
+    line1: "Rua Ottokar Doerffel, 401 · Sala 3",
     line2: "Joinville · Santa Catarina",
     city: "Joinville",
     state: "SC",

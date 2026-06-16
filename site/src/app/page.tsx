@@ -6,7 +6,6 @@ import { Sectors } from "@/components/sections/sectors";
 import { Manifesto } from "@/components/sections/manifesto";
 import { ImpactQuote } from "@/components/sections/impact-quote";
 import { Partners } from "@/components/sections/partners";
-import { Testimonials } from "@/components/sections/testimonials";
 import { Faq } from "@/components/sections/faq";
 import { FinalCta } from "@/components/sections/final-cta";
 
@@ -21,7 +20,6 @@ export default function Home() {
       <Manifesto />
       <ImpactQuote />
       <Partners />
-      <Testimonials />
       <Faq />
       <FinalCta />
     </>

@@ -30,7 +30,7 @@ export function OrgJsonLd() {
     ],
     address: {
       "@type": "PostalAddress",
-      streetAddress: SITE.address.line1,
+      streetAddress: `${SITE.address.street}, ${SITE.address.suite}`,
       addressLocality: SITE.address.city,
       addressRegion: SITE.address.state,
       addressCountry: SITE.address.country,
