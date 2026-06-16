@@ -88,8 +88,11 @@ type RevealProps = {
   as?: Tag;
 };
 
-export function Reveal({ children, className, delay = 0, y = 16, as = "div" }: RevealProps) {
-  const ref = useRevealObserver(false, "-80px 0px");
+export function Reveal({ children, className, delay = 0, y = 10, as = "div" }: RevealProps) {
+  // rootMargin com bottom POSITIVO (+35% da viewport): o elemento revela ~1/3 de
+  // tela ANTES de entrar no campo de visão, então a transição já terminou quando
+  // ele chega ao olho. É o que faz o scroll parecer nativo (conteúdo parado).
+  const ref = useRevealObserver(false, "0px 0px 50% 0px");
   const style = {
     "--reveal-y": `${y}px`,
     "--reveal-delay": `${delay}s`,
@@ -113,7 +116,7 @@ type StaggerProps = {
 /** Container: um único observer revela todos os itens de uma vez (via DOM); o
  *  escalonamento vem do `transition-delay` por índice, injetado no clone. */
 export function Stagger({ children, className, as = "div" }: StaggerProps) {
-  const ref = useRevealObserver(true, "-60px 0px");
+  const ref = useRevealObserver(true, "0px 0px 50% 0px");
 
   let i = 0;
   const items = Children.map(children, (child) => {
@@ -140,9 +143,11 @@ export function StaggerItem({
   as = "div",
   _index = 0,
 }: StaggerItemProps) {
+  // Cascata curta e com teto: passo de 0,045s, saturando em 0,18s (~4 itens).
+  // Listas longas não ficam "rasgando" itens depois que o scroll já passou.
   const style = {
-    "--reveal-y": "14px",
-    "--reveal-delay": `${(0.05 + _index * 0.08).toFixed(2)}s`,
+    "--reveal-y": "8px",
+    "--reveal-delay": `${Math.min(_index * 0.045, 0.18).toFixed(3)}s`,
   } as CSSProperties;
 
   return createElement(
