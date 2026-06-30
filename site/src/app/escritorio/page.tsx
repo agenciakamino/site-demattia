@@ -7,6 +7,7 @@ import { Reveal, Stagger, StaggerItem } from "@/components/primitives/reveal";
 import { BreadcrumbJsonLd } from "@/components/json-ld";
 import { FinalCta } from "@/components/sections/final-cta";
 import { PAGES, OFFICE_HIGHLIGHTS } from "@/lib/content";
+import { SITE } from "@/lib/site-config";
 
 export const metadata: Metadata = {
   title: "O escritório",
@@ -53,24 +54,29 @@ export default function EscritorioPage() {
         <Container size="xl">
           <div className="grid items-center gap-12 md:grid-cols-2 md:gap-16">
             <Reveal>
-              {/* Painel de marca no lugar da foto da fachada — a foto anterior
+              {/* Mapa do escritório no lugar da foto da fachada — a foto anterior
                   exibia outras empresas do prédio (inclusive outro escritório de
                   advocacia). Trocar por foto profissional do escritório quando o
                   cliente enviar a sessão fotográfica (Thaís / Bravus). */}
-              <div className="relative flex aspect-[4/5] flex-col justify-end overflow-hidden rounded-2xl border border-hairline bg-[radial-gradient(120%_90%_at_50%_0%,#221e45,#191634)] p-9 md:p-10">
-                <span
-                  aria-hidden
-                  className="font-display pointer-events-none absolute -right-3 -top-5 select-none text-[9rem] leading-none text-gold/10 md:text-[11rem]"
-                >
-                  DM
-                </span>
-                <p className="text-[0.65rem] font-medium uppercase tracking-[0.28em] text-paper/55">
-                  Joinville · Santa Catarina
-                </p>
-                <p className="font-display mt-4 text-balance text-xl font-normal leading-snug text-paper/90 md:text-2xl">
-                  Há duas décadas unindo solidez acadêmica e visão de mercado ao lado
-                  de empresas.
-                </p>
+              <div className="relative flex aspect-[4/5] flex-col overflow-hidden rounded-2xl border border-hairline bg-navy">
+                <iframe
+                  title="Mapa do escritório De Mattia Advogados — Rua Ottokar Doerffel, 401, Sala 3, Joinville/SC"
+                  src={SITE.address.mapsEmbed}
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                  className="w-full flex-1 grayscale-[0.25]"
+                />
+                <div className="bg-navy px-7 py-5 md:px-8 md:py-6">
+                  <p className="text-[0.65rem] font-medium uppercase tracking-[0.28em] text-gold/80">
+                    Onde estamos
+                  </p>
+                  <p className="font-display mt-2 text-balance text-lg font-normal leading-snug text-paper/90 md:text-xl">
+                    {SITE.address.line1}
+                  </p>
+                  <p className="mt-1 text-sm leading-relaxed text-paper/55">
+                    {SITE.address.line2}
+                  </p>
+                </div>
                 <span aria-hidden className="absolute inset-x-0 bottom-0 h-0.5 bg-gold/55" />
               </div>
             </Reveal>

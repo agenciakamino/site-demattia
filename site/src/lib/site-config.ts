@@ -36,6 +36,9 @@ export const SITE = {
     city: "Joinville",
     state: "SC",
     country: "BR",
+    // Embed do Google Maps sem chave (output=embed). Usado em Contato e Escritório.
+    mapsEmbed:
+      "https://www.google.com/maps?q=Rua%20Ottokar%20Doerffel%2C%20401%2C%20Joinville%20-%20SC&output=embed",
   },
 
   social: {

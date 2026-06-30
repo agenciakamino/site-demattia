@@ -99,7 +99,7 @@ export default function ContatoPage() {
               <div className="mt-6 aspect-[16/10] overflow-hidden rounded-2xl border border-hairline">
                 <iframe
                   title="Mapa do escritório De Mattia Advogados — Rua Ottokar Doerffel, 401, Sala 3, Joinville/SC"
-                  src="https://www.google.com/maps?q=Rua%20Ottokar%20Doerffel%2C%20401%2C%20Joinville%20-%20SC&output=embed"
+                  src={SITE.address.mapsEmbed}
                   loading="lazy"
                   referrerPolicy="no-referrer-when-downgrade"
                   className="h-full w-full"
