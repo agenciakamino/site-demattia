@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono, Fraunces } from "next/font/google";
+import { Geist, Fraunces } from "next/font/google";
 import "./globals.css";
 import { SITE } from "@/lib/site-config";
 import { Analytics } from "@/components/analytics";
@@ -11,12 +11,6 @@ import { PageTransition } from "@/components/layout/page-transition";
 
 const geist = Geist({
   variable: "--font-geist",
-  subsets: ["latin"],
-  display: "swap",
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
   subsets: ["latin"],
   display: "swap",
 });
@@ -75,7 +69,7 @@ export default function RootLayout({
     <html
       lang="pt-BR"
       suppressHydrationWarning
-      className={`${geist.variable} ${geistMono.variable} ${fraunces.variable} h-full antialiased`}
+      className={`${geist.variable} ${fraunces.variable} h-full antialiased`}
     >
       <body className="flex min-h-full flex-col font-sans">
         {/* Marca o documento como "JS ativo" ANTES do 1º paint: habilita o estado

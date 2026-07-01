@@ -47,7 +47,7 @@
   /* — Tipografia — */
   --font-sans: var(--font-geist), ui-sans-serif, system-ui, sans-serif;
   --font-display: var(--font-fraunces), ui-serif, Georgia, serif;
-  --font-mono: var(--font-geist-mono), ui-monospace, monospace;
+  --font-mono: ui-monospace, monospace;
 
   /* — Utilitários de marca (bg-navy, text-ink, border-hairline, etc.) — */
   --color-navy: var(--navy);
