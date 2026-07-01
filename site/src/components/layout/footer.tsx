@@ -98,6 +98,9 @@ function SocialLink({
   label: string;
   children: React.ReactNode;
 }) {
+  // Perfis ainda não confirmados ("#") não viram link morto: some até haver URL real.
+  if (!href || href === "#") return null;
+
   return (
     <a
       href={href}

@@ -1,0 +1,95 @@
+# =============================================================================
+# De Mattia Advogados — configuração Apache p/ Hostinger (site estático Next.js)
+# Copiado automaticamente de public/.htaccess para out/.htaccess a cada build.
+# Serve o export estático (output: "export", trailingSlash: true).
+# Todas as diretivas ficam sob <IfModule> para nunca derrubar o site (500) caso
+# um módulo não esteja habilitado no plano de hospedagem.
+# =============================================================================
+
+# -----------------------------------------------------------------------------
+# 1) Content-Type correto para as imagens de social preview (OpenGraph/Twitter).
+#    O Next gera `opengraph-image` e `twitter-image` SEM extensão .png; sem isto
+#    o Apache as serve como application/octet-stream e WhatsApp/Facebook/LinkedIn
+#    não renderizam a prévia do link. ForceType (core) garante image/png.
+# -----------------------------------------------------------------------------
+<FilesMatch "^(opengraph-image|twitter-image)$">
+  ForceType image/png
+</FilesMatch>
+
+# -----------------------------------------------------------------------------
+# 2) Compressão de texto (gzip / brotli). Reduz HTML/CSS/JS/SVG/JSON em ~70%.
+# -----------------------------------------------------------------------------
+<IfModule mod_deflate.c>
+  AddOutputFilterByType DEFLATE text/html text/css text/plain text/xml
+  AddOutputFilterByType DEFLATE application/javascript application/x-javascript
+  AddOutputFilterByType DEFLATE application/json application/xml
+  AddOutputFilterByType DEFLATE image/svg+xml application/rss+xml
+  AddOutputFilterByType DEFLATE font/ttf font/otf font/woff font/woff2 application/font-woff
+</IfModule>
+
+<IfModule mod_brotli.c>
+  AddOutputFilterByType BROTLI_COMPRESS text/html text/css text/plain text/xml
+  AddOutputFilterByType BROTLI_COMPRESS application/javascript application/json application/xml
+  AddOutputFilterByType BROTLI_COMPRESS image/svg+xml font/woff2
+</IfModule>
+
+# -----------------------------------------------------------------------------
+# 3) Cache: assets com hash no nome são imutáveis (1 ano); HTML sempre revalida.
+#    Cabeçalhos e canonicalização exigem mod_headers/mod_rewrite (padrão na
+#    Hostinger). Ficam sob <IfModule> por segurança.
+# -----------------------------------------------------------------------------
+<IfModule mod_headers.c>
+  # Assets do Next com hash no nome — imutáveis por 1 ano.
+  <FilesMatch "\.(js|css|woff2|woff|ttf|otf)$">
+    Header set Cache-Control "public, max-age=31536000, immutable"
+  </FilesMatch>
+
+  # Imagens estáticas — 30 dias.
+  <FilesMatch "\.(png|jpg|jpeg|gif|webp|avif|svg|ico)$">
+    Header set Cache-Control "public, max-age=2592000"
+  </FilesMatch>
+
+  # Social preview (sem extensão) — 1 dia.
+  <FilesMatch "^(opengraph-image|twitter-image)$">
+    Header set Cache-Control "public, max-age=86400"
+  </FilesMatch>
+
+  # HTML / sitemap / robots — revalida sempre para pegar a última versão.
+  <FilesMatch "\.(html|xml|txt|json)$">
+    Header set Cache-Control "public, max-age=0, must-revalidate"
+  </FilesMatch>
+
+  # Cabeçalhos de segurança (Lighthouse Best Practices).
+  Header always set X-Content-Type-Options "nosniff"
+  Header always set Referrer-Policy "strict-origin-when-cross-origin"
+  Header always set X-Frame-Options "SAMEORIGIN"
+  Header always set Permissions-Policy "geolocation=(), microphone=(), camera=()"
+  # HSTS: força HTTPS por 1 ano (o SSL da Hostinger já cobre o domínio).
+  Header always set Strict-Transport-Security "max-age=31536000; includeSubDomains"
+</IfModule>
+
+# -----------------------------------------------------------------------------
+# 4) Canonicalização: força HTTPS + www (canonical do site é www.demattia.com.br).
+#    Evita conteúdo duplicado entre http/https e com/sem www.
+# -----------------------------------------------------------------------------
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+
+  # http -> https
+  RewriteCond %{HTTPS} off
+  RewriteCond %{HTTP:X-Forwarded-Proto} !https
+  RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+  # apex (sem www) -> www
+  RewriteCond %{HTTP_HOST} ^demattia\.com\.br$ [NC]
+  RewriteRule ^ https://www.demattia.com.br%{REQUEST_URI} [L,R=301]
+</IfModule>
+
+# -----------------------------------------------------------------------------
+# 5) Página 404 personalizada (gerada pelo Next em /404.html) e sem listagem.
+# -----------------------------------------------------------------------------
+ErrorDocument 404 /404.html
+
+<IfModule mod_autoindex.c>
+  Options -Indexes
+</IfModule>

@@ -6,6 +6,7 @@ import { PageHero } from "@/components/primitives/page-hero";
 import { Reveal } from "@/components/primitives/reveal";
 import { Cta } from "@/components/primitives/cta";
 import { BreadcrumbJsonLd } from "@/components/json-ld";
+import { MapFacade } from "@/components/blocks/map-facade";
 import { PAGES } from "@/lib/content";
 import { SITE, whatsappUrl, MAILTO, TEL } from "@/lib/site-config";
 
@@ -60,7 +61,7 @@ export default function ContatoPage() {
                 </Cta>
               </div>
 
-              <dl className="mt-10 space-y-6">
+              <ul role="list" className="mt-10 space-y-6">
                 <ContactRow icon={<Mail className="h-4 w-4" />} label="E-mail">
                   <a
                     href={MAILTO}
@@ -80,7 +81,7 @@ export default function ContatoPage() {
                 <ContactRow icon={<Clock className="h-4 w-4" />} label="Atendimento">
                   Segunda a sexta, em horário comercial
                 </ContactRow>
-              </dl>
+              </ul>
             </Reveal>
 
             {/* Endereço + mapa */}
@@ -97,11 +98,9 @@ export default function ContatoPage() {
               {/* Mapa do escritório — endereço confirmado pelo cliente.
                   Embed do Google Maps sem chave (output=embed). */}
               <div className="mt-6 aspect-[16/10] overflow-hidden rounded-2xl border border-hairline">
-                <iframe
+                <MapFacade
                   title="Mapa do escritório De Mattia Advogados — Rua Ottokar Doerffel, 401, Sala 3, Joinville/SC"
                   src={SITE.address.mapsEmbed}
-                  loading="lazy"
-                  referrerPolicy="no-referrer-when-downgrade"
                   className="h-full w-full"
                 />
               </div>
@@ -123,16 +122,16 @@ function ContactRow({
   children: React.ReactNode;
 }) {
   return (
-    <div className="flex items-start gap-3">
+    <li className="flex items-start gap-3">
       <span className="mt-0.5 text-navy" aria-hidden>
         {icon}
       </span>
       <div>
-        <dt className="text-[0.65rem] font-medium uppercase tracking-[0.2em] text-faint/80">
+        <p className="text-[0.65rem] font-medium uppercase tracking-[0.2em] text-faint">
           {label}
-        </dt>
-        <dd className="mt-1 text-sm text-ink/85">{children}</dd>
+        </p>
+        <div className="mt-1 text-sm text-ink/85">{children}</div>
       </div>
-    </div>
+    </li>
   );
 }

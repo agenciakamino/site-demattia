@@ -6,6 +6,7 @@ import { PageHero } from "@/components/primitives/page-hero";
 import { Reveal, Stagger, StaggerItem } from "@/components/primitives/reveal";
 import { BreadcrumbJsonLd } from "@/components/json-ld";
 import { FinalCta } from "@/components/sections/final-cta";
+import { MapFacade } from "@/components/blocks/map-facade";
 import { PAGES, OFFICE_HIGHLIGHTS } from "@/lib/content";
 import { SITE } from "@/lib/site-config";
 
@@ -59,11 +60,9 @@ export default function EscritorioPage() {
                   advocacia). Trocar por foto profissional do escritório quando o
                   cliente enviar a sessão fotográfica (Thaís / Bravus). */}
               <div className="relative flex aspect-[4/5] flex-col overflow-hidden rounded-2xl border border-hairline bg-navy">
-                <iframe
+                <MapFacade
                   title="Mapa do escritório De Mattia Advogados — Rua Ottokar Doerffel, 401, Sala 3, Joinville/SC"
                   src={SITE.address.mapsEmbed}
-                  loading="lazy"
-                  referrerPolicy="no-referrer-when-downgrade"
                   className="w-full flex-1 grayscale-[0.25]"
                 />
                 <div className="bg-navy px-7 py-5 md:px-8 md:py-6">

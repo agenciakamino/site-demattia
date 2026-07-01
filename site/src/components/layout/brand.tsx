@@ -49,7 +49,9 @@ export function Brand({
         <span
           className={cn(
             "mt-1 text-[0.6rem] font-medium uppercase tracking-[0.3em]",
-            isDark ? "text-paper/55" : "text-faint",
+            // navy/80 (não text-faint): garante contraste AA do descritor mesmo
+            // sobre o header de vidro (bg-paper/70) nas páginas de hero navy.
+            isDark ? "text-paper/55" : "text-navy/80",
           )}
         >
           Advogados Associados
@@ -58,7 +60,7 @@ export function Brand({
           <span
             className={cn(
               "nums mt-1 text-[0.6rem] uppercase tracking-[0.2em]",
-              isDark ? "text-paper/65" : "text-faint",
+              isDark ? "text-paper/65" : "text-navy/80",
             )}
           >
             OAB/SC 4011/2017

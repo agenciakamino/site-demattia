@@ -23,7 +23,7 @@ export const SITE = {
     whatsappDisplay: "(47) 99233-1111",
     phone: "+5547992331111",
     phoneDisplay: "(47) 99233-1111",
-    // [CONFIRMAR] e-mail institucional no novo domínio (.com.br)
+    // E-mail institucional confirmado pelo cliente (01/jul/2026).
     email: "contato@demattia.com.br",
   },
 
@@ -42,9 +42,10 @@ export const SITE = {
   },
 
   social: {
-    // [CONFIRMAR] perfis oficiais
+    // LinkedIn: cliente não possui perfil (confirmado 01/jul/2026) → "#" mantém
+    // o ícone oculto (ver footer SocialLink). Instagram confirmado pelo cliente.
     linkedin: "#",
-    instagram: "#",
+    instagram: "https://www.instagram.com/joaodemattia.adv/",
   },
 
   // Mensagem padrão pré-preenchida ao abrir o WhatsApp
